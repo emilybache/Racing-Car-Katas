@@ -1,14 +1,4 @@
 TDD with Mock Objects: Design Principles and Emerging Properties
 
-These TDD micro-exercises together with the TDD micro-exercises questionnaire are the companion of the paper 'TDD with Mock Objects: Design Principles and Emerging Properties'.
-Please answer the questionnaire before coding your implementation of the TDD micro-exercises.
-After that, send me the code.
-
-Instructions:
-- you can use mocks and the mock framework of your choise, write manual mock and stub or do without mock and stubs
-- in the code of the TirePressureMonitoringSystem.Tests you can find an example of manual mock and stub
-- TirePressureMonitoringSystem exercise: write the unit tests for the Alarm class, refactor the code as much as you need to make the class testable
-- UnicodeFileToHtmTextConverter exercise: write the unit tests for the UnicodeFileToHtmTextConverter class, refactor the code as much as you need to make the class testable
-- TelemetrySystem exercise: write the unit tests for the TelemetryDiagnosticControls class, refactor the code as much as you need to make the class testable
-- TicketDispenser exercise: write the unit tests for the TicketDispenser, refactor the code as much as you need to make the class testable
-
+The questionnaire together with the TDD micro-exercises is the companion of the paper 'TDD with Mock Objects: Design Principles and Emerging Properties'.
+To start the questionnaire in English, click here: http://tool.surveypirate.com/Survey.aspx?surveyid=25731&sp.mac=DomDcdUgTB8gwbR5uWLCIg%3d%3d
