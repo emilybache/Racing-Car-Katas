@@ -1,3 +1,4 @@
+[ENG]
 TDD with Mock Objects: Design Principles and Emerging Properties
 
 
@@ -7,11 +8,9 @@ After that, please send the code.
 
 
 Instructions:
-- you can use mocks and the mock framework of your choise, 
-  write manual mock and stub or do without mock and stubs
+- you can use mocks and the mock framework of your choise, write manual mock and stub or do without mock and stubs
 
-- in the code of the TirePressureMonitoringSystem.Tests 
-  you can find an example of manual mock and stub
+- in the code of the TirePressureMonitoringSystem.Tests you can find an example of manual mock and stub
 
 - TirePressureMonitoringSystem exercise:  write the unit tests for the Alarm class, 
   refactor the code as much as you need to make the class testable
@@ -25,3 +24,34 @@ Instructions:
 - TicketDispenser exercise: write the unit tests for the TicketDispenser, 
   refactor the code as much as you need to make the class testable
 
+
+
+
+
+
+
+[ITA]
+TDD with Mock Objects: Design Principles and Emerging Properties
+
+Questi micro-esercizi di TDD insieme al questionario accompagnano il paper 'TDD with Mock Objects: 
+Design Principles and Emerging Properties'.
+Rispondi al questionario prima di implementare la tua soluzione dei micro-esercizi di TDD.
+Quindi invia il codice.
+
+
+Instruzioni:
+- puoi usare i mock e il mock framework che preferisci, scrivere a mano i mock e i stub o non usare affatto i mock
+
+- nel codice di TirePressureMonitoringSystem.Tests si trova un esempio di mock implementato a mano
+
+- esercizio TirePressureMonitoringSystem:  scrivi gli unit test per la classe Alarm,
+  fai il refactoring del codice che ritieni necessario per rendere la classe testabile
+
+- esercizio UnicodeFileToHtmTextConverter: scrivi gli unit tests per la classe 
+  UnicodeFileToHtmTextConverter, fai il refactoring codice che ritieni necessario per rendere la classe testabile
+
+- esercizio TelemetrySystem: scrivi gli unit test per la classe
+  TelemetryDiagnosticControls, fai il refactoring codice che ritieni necessario per rendere la classe testabile
+
+- esercizio TicketDispenser: scrivi gli unit test per la classe TicketDispenser, 
+  fai il refactoring codice che ritieni necessario per rendere la classe testabile
