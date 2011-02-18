@@ -1,18 +1,43 @@
+[ENG]
 TDD with Mock Objects: Design Principles and Emerging Properties
 
 Here you can find:
 - the last draft of the paper
-- the questionnaire aimed to access the relationship between the practice in use of TDD and the adherence to SOLID principles. 
+- the questionnaire aimed to access the relationship between the practice in use of TDD and the adherence to SOLID principles
 - the code of TDD micro-exercises
 
 
 If you are interested to participate to this experiment:
 1) answer the short questionnaire
-2) code your implementation of the TDD micro-exercises and send your code
-3) receive one solution of the TTD micro-exercises developed with the practices described in the paper
+2) implementation your solution of the TDD micro-exercises and send your code
+3) receive one solution of the TDD micro-exercises developed with the practices described in the paper
 
 
 To send the code or for any comments and questions you can contact me from:
+- http://github.com/lucaminudel
+- http://www.linkedin.com/in/lucaminudel
+- http://twitter.com/lukadotnet
+- http://blogs.ugidotnet.org/luKa/contact.aspx
+
+
+
+
+[ITA]
+TDD with Mock Objects: Design Principles and Emerging Properties
+
+Qui puoi trovare:
+- l'ultima bozza del paper
+- il questionario che ha l'obiettivo di verificare la relazione tra la pratica in uso del TDD e la aderenza ai principi SOLID
+- il codice dei micro-esercizi di TDD
+
+
+Per partecipare a questo esperimento:
+1) rispondi al breve questionario
+2) scrivi la tua soluzione dei micro-esercizi di TDD e invia il codice
+3) ricevi una soluzione dei micro-esercizi di TDD sviluppata secondo le pratiche descritte nel paper
+
+
+Per inviare il codice o per qualunque commento o domanda puoi contattarmi qui:
 - http://github.com/lucaminudel
 - http://www.linkedin.com/in/lucaminudel
 - http://twitter.com/lukadotnet
