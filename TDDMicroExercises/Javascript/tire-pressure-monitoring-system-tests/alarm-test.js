@@ -6,17 +6,7 @@ describe('Tyre Pressure Monitoring System', function () {
 
 			var target = new Alarm();
 			target.check();
-			target.check();
-			target.check();
-			target.check();
-			target.check();
-			target.check();
-			target.check();
-			target.check();
-			target.check();
-
-			alert(target.alarmOn());
-
+			
 		});
 
 	});

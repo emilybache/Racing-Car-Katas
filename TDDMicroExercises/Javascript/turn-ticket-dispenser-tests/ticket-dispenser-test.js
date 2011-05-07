@@ -4,7 +4,7 @@ describe('Turn Ticket Dispenser', function () {
 
 		it('Do something', function () {
 
-			var target = new UnicodeFileToHtmTextConverter();
+			var target = new TicketDispenser();
 
 		});
 

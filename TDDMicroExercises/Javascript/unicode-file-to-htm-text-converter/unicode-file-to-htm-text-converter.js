@@ -17,7 +17,7 @@ UnicodeFileToHtmTextConverter.prototype = {
 
 		var htmlLines = this._basicHtmlEncode(text);
 		return htmlLines;
-	}
+	},
 	
 	_basicHtmlEncode: function (source) {
 

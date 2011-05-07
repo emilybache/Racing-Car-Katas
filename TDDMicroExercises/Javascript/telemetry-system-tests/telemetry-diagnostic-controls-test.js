@@ -7,7 +7,7 @@ describe('Telemetry System', function () {
 			var target = new TelemetryDiagnosticControls();
 			target.checkTransmission();
 
-			alert(target.readDiagnosticInfo());
+			var result = target.readDiagnosticInfo();
 
 		});
 
