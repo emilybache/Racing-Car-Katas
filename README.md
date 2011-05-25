@@ -8,12 +8,7 @@ Here you can find:
 
 If you are interested to participate to this experiment:  implement your solution of the TDD micro-exercises and send your code.
 
-To send the code or for any comments and questions you can contact me from:
 
--  http://github.com/lucaminudel 
--  http://www.linkedin.com/in/lucaminudel 
--  http://twitter.com/lukadotnet 
--  http://blogs.ugidotnet.org/luKa/contact.aspx 
 
 
 
