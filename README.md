@@ -1,4 +1,4 @@
-# TDD with Mock Objects: Design Principles and Emerging Properties
+﻿# TDD with Mock Objects: Design Principles and Emerging Properties
 
 ## [ENG] 
 Here you can find:
@@ -26,7 +26,7 @@ Qui puoi trovare:
 Per partecipare a questo esperimento:  scrivi la tua soluzione dei micro-esercizi di TDD e invia il codice
 
 Per inviare il codice o per qualunque commento o domanda puoi contattarmi qui:
- - http://github.com/lucaminudel
- - http://www.linkedin.com/in/lucaminudel
- - http://twitter.com/lukadotnet
- - http://blogs.ugidotnet.org/luKa/contact.aspx
+- http://github.com/lucaminudel
+- http://www.linkedin.com/in/lucaminudel
+- http://twitter.com/lukadotnet
+- http://blogs.ugidotnet.org/luKa/contact.aspx
