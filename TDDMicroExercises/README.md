@@ -4,7 +4,7 @@
 
 ### Instructions
 
-Here follow these 4 distinct projects. They could be code you inherited from a legacy code-base. Suppose you already wrote the acceptance tests for the features that uses the classes in these projects. 
+Here follow these 4 distinct projects. They could be code you inherited from a legacy code-base. Suppose you already wrote the acceptance tests for these projects. 
 Now you want to write unit tests for these projects:
 
 1. **TirePressureMonitoringSystem exercise**:  write the unit tests for the Alarm class, refactor the code as much as you need to make the class testable
@@ -32,8 +32,8 @@ To send the code or for any comments and questions you can contact me from:
 
 ### Instruzioni
 
-Qui seguono quattro progetti differenti. Potrebbero essere codice che hai ereditato da una code base legacy. Immagina di aver gia' scritto i test di accettazione per le feature che fanno uso
-delle classi di questi progetti. Ora vuoi scrivere gli unit test per questi progetti:
+Qui seguono quattro progetti differenti. Potrebbero essere codice che hai ereditato da una code base legacy. Immagina di aver gia' scritto i test di accettazione per questi progetti. 
+Ora vuoi scrivere gli unit test per questi progetti:
 
 1. **esercizio TirePressureMonitoringSystem**: scrivi gli unit test per la classe Alarm, fai il refactoring del codice che ritieni necessario per rendere la classe testabile
 1. **esercizio UnicodeFileToHtmTextConverter**: scrivi gli unit tests per la classe UnicodeFileToHtmTextConverter, fai il refactoring codice che ritieni necessario per rendere la classe testabile
