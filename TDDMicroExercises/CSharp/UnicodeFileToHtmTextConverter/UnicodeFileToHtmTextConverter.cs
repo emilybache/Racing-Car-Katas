@@ -23,7 +23,7 @@ namespace TDDMicroExercises.UnicodeFileToHtmTextConverter
                 while (line != null)
                 {
                     html += HttpUtility.HtmlEncode(line);
-                    html += "</b>";
+                    html += "<br />";
                     line = unicodeFileStream.ReadLine();
                 }
 
