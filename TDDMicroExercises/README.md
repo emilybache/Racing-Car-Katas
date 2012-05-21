@@ -1,8 +1,6 @@
 # TDD micro-exercises
 
-## [ENG]
-
-### Instructions
+## Instructions
 
 Here follow these 4 distinct projects. They could be code you inherited from a legacy code-base. Suppose you already wrote the acceptance tests for these projects. 
 Now you want to write unit tests for these projects:
@@ -14,10 +12,8 @@ Now you want to write unit tests for these projects:
 
 Apply the unit testing style you are more comfortable with. You can choose to use stub or mock or not at all. If you do, you are free to use the mocking tool that you prefer. Do the same for the unit testing framework.
 
-### A possible solution
+## A possible solution
 
-Here you can see a possible solution of the exercise:
--  https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/tree/master/TDDMicroExercises.ProposedSolution
-
+Here you find one of the possible solutions for the exercise: [proposed solution] (https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/tree/master/TDDMicroExercises.ProposedSolution) 
 Feels free to send your comments and questions.
 
