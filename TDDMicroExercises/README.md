@@ -14,6 +14,6 @@ Apply the unit testing style you are more comfortable with. You can choose to us
 
 ## A possible solution
 
-Here you find one of the possible solutions for the exercise: [proposed solution] (https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/tree/master/TDDMicroExercises.ProposedSolution) 
+Here you find one of the possible solutions for the exercise: [proposed solution.] (https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/tree/master/TDDMicroExercises.ProposedSolution) 
 Feels free to send your comments and questions.
 
