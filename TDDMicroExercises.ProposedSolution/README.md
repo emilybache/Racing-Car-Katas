@@ -6,5 +6,5 @@ Here one of the possible solutions for the exercise, it contains only the change
 
 In this solution some of the design principles violations has been removed as consequence of changes required to make the class testable, other violations are still there.
 
-Can you spot these violations? Can you mention a change request or a new feature request that surface a violation? Can you suggest a refactoring that remove that violation?
+Can you spot the violations that are sill there? Can you mention a change request or a new feature request that surface one of that violations? Can you suggest a refactoring that remove the violation?
 
