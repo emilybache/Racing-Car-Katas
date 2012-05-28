@@ -12,7 +12,7 @@ public class AlarmTests {
 	private static final double LOW_PRESSURE = Alarm.LOW_PRESSURE_THRESHOLD - 1;
 	private static final double NORMAL_PRESSURE = Alarm.LOW_PRESSURE_THRESHOLD + ((Alarm.HIGH_PRESSURE_THRESHOLD - Alarm.LOW_PRESSURE_THRESHOLD)/2);
 	private StubSensor stubSensor;
-	private IAlarm alarm;
+	private Alarm alarm;
 
 	@Before
 	public void setUp(){

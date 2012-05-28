@@ -1,6 +1,6 @@
 package tddmicroexercises.tirepressuremonitoringsystem;
 
-public class Alarm implements IAlarm
+public class Alarm
 {
     public static final double LOW_PRESSURE_THRESHOLD = 17;
     public static final double HIGH_PRESSURE_THRESHOLD = 21;
