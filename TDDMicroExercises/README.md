@@ -2,8 +2,7 @@
 
 ## Instructions
 
-Here follow these 4 distinct projects. They could be code you inherited from a legacy code-base. Suppose you already wrote the acceptance tests for these projects. 
-Now you want to write unit tests for these projects:
+Here follow these 4 distinct projects. They could be code you inherited from a legacy code-base. Now you want to write unit tests for these projects:
 
 1. **TirePressureMonitoringSystem exercise**:  write the unit tests for the Alarm class, refactor the code as much as you need to make the class testable
 1. **UnicodeFileToHtmTextConverter exercise**: write the unit tests for the UnicodeFileToHtmTextConverter class, refactor the code as much as you need to make the class testable
@@ -15,5 +14,5 @@ Apply the unit testing style you are more comfortable with. You can choose to us
 ## A possible solution
 
 Here you find one of the possible solutions for the exercise: [proposed solution.] (https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/tree/master/TDDMicroExercises.ProposedSolution) 
-Feels free to send your comments and questions.
+Feel free to send your comments and questions.
 
