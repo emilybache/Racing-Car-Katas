@@ -1,18 +1,25 @@
 package tddmicroexercises.telemetrysystem;
 
+import java.net.ConnectException;
+
 public class TelemetryDiagnosticControls
 {
-    private final String DiagnosticChannelConnectionString = "*111#";
+    public static final String CONNECTION_STRING = "*111#";
     
-    private final TelemetryClient telemetryClient;
+    private final IConnection connection;
+    private final IDataChannel dataChannel;
     private String diagnosticInfo = "";
 
-        public TelemetryDiagnosticControls()
-        {
-            telemetryClient = new TelemetryClient();
+        public TelemetryDiagnosticControls(){
+            this(new TelemetryConnection(), new TelemetryDataChannel());
         }
         
-        public String getDiagnosticInfo(){
+        public TelemetryDiagnosticControls(IConnection connection, IDataChannel dataChannel) {
+			this.connection = connection;
+			this.dataChannel = dataChannel;
+		}
+
+		public String getDiagnosticInfo(){
         	return diagnosticInfo;
         }
         
@@ -20,25 +27,22 @@ public class TelemetryDiagnosticControls
         	this.diagnosticInfo = diagnosticInfo;
         }
  
-        public void checkTransmission() throws Exception
-        {
+        public void checkTransmission() throws Exception{
             diagnosticInfo = "";
 
-	        telemetryClient.disconnect();
+	        connection.disconnect();
 	
 	        int retryLeft = 3;
-	        while (telemetryClient.getOnlineStatus() == false && retryLeft > 0)
-	        {
-	            telemetryClient.connect(DiagnosticChannelConnectionString);
+	        while (connection.getOnlineStatus() == false && retryLeft > 0){
+	            connection.connect(CONNECTION_STRING);
 	            retryLeft -= 1;
 	        }
 	         
-	        if(telemetryClient.getOnlineStatus() == false)
-	        {
-	            throw new Exception("Unable to connect.");
+	        if(connection.getOnlineStatus() == false){
+	            throw new ConnectException("Unable to connect.");
 	        }
 	
-	        telemetryClient.send(TelemetryClient.DIAGNOSTIC_MESSAGE);
-	        diagnosticInfo = telemetryClient.receive();
+	        dataChannel.send(IDataChannel.DIAGNOSTIC_MESSAGE);
+	        diagnosticInfo = dataChannel.receive();
     }
 }
