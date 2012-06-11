@@ -20,6 +20,7 @@ public class TelemetryDiagnosticControlsTest{
 	}
     
 	@Test
+	// Regression test to ensure existing API is not broken
 	public void regressionTest() throws Exception{
 		TelemetryDiagnosticControls controls = new TelemetryDiagnosticControls();
 		

@@ -8,6 +8,7 @@ import org.junit.Test;
 public class TurnTicketDispenserTests {
 	
 	@Test
+	// Regression test to ensure existing API is not broken
 	public void returnsAnIncrementingSequenceOfTicketsUsingDefaultSequenceImplementation() {
 		TicketDispenser dispenser = new TicketDispenser();
 		assertEquals(0,dispenser.getTurnTicket().getTurnNumber());
@@ -24,7 +25,7 @@ public class TurnTicketDispenserTests {
 	}
 	
 	@Test
-	public void sequenceIsMaintainedAcrossMultipleDispenserInstances(){
+	public void sequenceIsMaintainedAcrossMultipleDispensers(){
 		ITurnNumberSequence mockTurnNumberSequence = new MockTurnNumberSequence();
 		assertEquals(0,new TicketDispenser(mockTurnNumberSequence).getTurnTicket().getTurnNumber());
 		assertEquals(1,new TicketDispenser(mockTurnNumberSequence).getTurnTicket().getTurnNumber());
