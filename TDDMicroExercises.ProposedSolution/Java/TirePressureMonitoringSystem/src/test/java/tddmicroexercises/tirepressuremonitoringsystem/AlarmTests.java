@@ -21,16 +21,6 @@ public class AlarmTests {
 	}
 	
 	@Test
-	public void highPressureTriggerValueMustBeHigherThanLowPressureTriggerValue(){
-		assertTrue(Alarm.HIGH_PRESSURE_THRESHOLD > Alarm.LOW_PRESSURE_THRESHOLD);
-	}
-	
-	@Test
-	public void alarmIsNotTriggeredAfterInitialisation(){
-		assertFalse(alarm.isAlarmOn());
-	}
-
-	@Test
 	public void alarmIsTriggeredBySensorReadingBelowLowPressureValue() {
 		stubSensor.pushPsiValue(LOW_PRESSURE);
 		alarm.check();
@@ -45,7 +35,7 @@ public class AlarmTests {
 	}
 	
 	@Test
-	public void alarmIsNotTriggeredBySensorReadingAboveLowPressureValueAndBelowHighPressureValue(){
+	public void alarmIsNotTriggeredBySensorReadingANormalPresureValue(){
 		double pressureValue = NORMAL_PRESSURE;
 		stubSensor.pushPsiValue(pressureValue);
 		alarm.check();

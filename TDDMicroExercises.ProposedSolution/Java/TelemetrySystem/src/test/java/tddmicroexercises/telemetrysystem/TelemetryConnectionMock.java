@@ -1,10 +1,8 @@
 package tddmicroexercises.telemetrysystem;
 
-import java.util.Stack;
-
 public class TelemetryConnectionMock implements IConnection {
 
-	private Stack<Boolean> onlineStatuses = new Stack<Boolean>();
+	private boolean onlineStatus;
 	private int connectCallCount = 0;
 	private int disconnectCallCount;
 	private String connectString;
@@ -14,19 +12,16 @@ public class TelemetryConnectionMock implements IConnection {
 	}
 
 	public boolean getOnlineStatus() {
-		return onlineStatuses.peek();
+		return onlineStatus;
 	}
 
 	public void connect(String string) {
 		connectString = string;
 		connectCallCount++;
-		onlineStatuses.pop();
 	}
 
-	//vararg syntax
-	public void setOnlineStatus(Boolean ... statuses) {
-		for (Boolean status : statuses )
-		onlineStatuses.push(status) ;
+	public void setOnlineStatus(boolean status) {
+		this.onlineStatus = status;
 	}
 
 	public int getConnectCallCount() {
