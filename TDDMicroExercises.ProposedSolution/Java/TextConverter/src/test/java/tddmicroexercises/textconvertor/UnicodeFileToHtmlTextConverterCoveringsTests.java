@@ -6,7 +6,7 @@ import java.io.IOException;
 
 import org.junit.Test;
 
-public class UnicodeFileToHtmlTextConverterRegressionTests {
+public class UnicodeFileToHtmlTextConverterCoveringsTests {
 
 	@Test
 	// Regression test to ensure existing API is not broken

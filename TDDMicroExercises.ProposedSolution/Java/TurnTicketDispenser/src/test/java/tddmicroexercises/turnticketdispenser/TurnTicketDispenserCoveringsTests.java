@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 
-public class TurnTicketDispenserRegressionTests {
+public class TurnTicketDispenserCoveringsTests {
 	
 	@Test
 	// Regression test to ensure existing API is not broken
