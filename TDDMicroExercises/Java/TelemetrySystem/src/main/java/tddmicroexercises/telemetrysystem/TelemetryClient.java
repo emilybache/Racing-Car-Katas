@@ -16,7 +16,7 @@ public class TelemetryClient
 		return onlineStatus; 
 	}
 
-	public void Connect(String telemetryServerConnectionString)
+	public void connect(String telemetryServerConnectionString)
 	{
 		if (telemetryServerConnectionString == null || "".equals(telemetryServerConnectionString))
 		{
@@ -29,12 +29,12 @@ public class TelemetryClient
 		onlineStatus = success;
 	}
 
-	public void Disconnect()
+	public void disconnect()
 	{
 		onlineStatus = false;
 	}
 
-	public void Send(String message)
+	public void send(String message)
 	{
 		if (message == null || "".equals(message))
 		{
@@ -66,7 +66,7 @@ public class TelemetryClient
 		// here should go the real Send operation
 	}
 
-	public String Receive()
+	public String receive()
 	{
 		String message;
 

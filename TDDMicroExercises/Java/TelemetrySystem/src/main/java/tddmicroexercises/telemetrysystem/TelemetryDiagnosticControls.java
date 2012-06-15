@@ -4,41 +4,41 @@ public class TelemetryDiagnosticControls
 {
     private final String DiagnosticChannelConnectionString = "*111#";
     
-    private final TelemetryClient _telemetryClient;
-    private String _diagnosticInfo = "";
+    private final TelemetryClient telemetryClient;
+    private String diagnosticInfo = "";
 
         public TelemetryDiagnosticControls()
         {
-            _telemetryClient = new TelemetryClient();
+            telemetryClient = new TelemetryClient();
         }
         
         public String getDiagnosticInfo(){
-        	return _diagnosticInfo;
+        	return diagnosticInfo;
         }
         
         public void setDiagnosticInfo(String diagnosticInfo){
-        	this._diagnosticInfo = diagnosticInfo;
+        	this.diagnosticInfo = diagnosticInfo;
         }
  
-        public void CheckTransmission() throws Exception
+        public void checkTransmission() throws Exception
         {
-            _diagnosticInfo = "";
+            diagnosticInfo = "";
 
-        _telemetryClient.Disconnect();
-
-        int retryLeft = 3;
-        while (_telemetryClient.getOnlineStatus() == false && retryLeft > 0)
-        {
-            _telemetryClient.Connect(DiagnosticChannelConnectionString);
-            retryLeft -= 1;
-        }
-         
-        if(_telemetryClient.getOnlineStatus() == false)
-        {
-            throw new Exception("Unable to connect.");
-        }
-
-        _telemetryClient.Send(TelemetryClient.DIAGNOSTIC_MESSAGE);
-        _diagnosticInfo = _telemetryClient.Receive();
+	        telemetryClient.disconnect();
+	
+	        int retryLeft = 3;
+	        while (telemetryClient.getOnlineStatus() == false && retryLeft > 0)
+	        {
+	            telemetryClient.connect(DiagnosticChannelConnectionString);
+	            retryLeft -= 1;
+	        }
+	         
+	        if(telemetryClient.getOnlineStatus() == false)
+	        {
+	            throw new Exception("Unable to connect.");
+	        }
+	
+	        telemetryClient.send(TelemetryClient.DIAGNOSTIC_MESSAGE);
+	        diagnosticInfo = telemetryClient.receive();
     }
 }
