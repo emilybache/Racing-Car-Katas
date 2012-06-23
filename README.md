@@ -8,4 +8,4 @@ Here you can find:
 -  a [proposed solution] (https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/tree/master/TDDMicroExercises.ProposedSolution) 
 -  share [your solution] (https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/tree/master/TDDMicroExercises.YoursSolutions) 
 
-The complete Java version of the TDD micro-exercises and of the proposed solution soon available, porting underway by [peterrhysthomas] (https://github.com/peterrhysthomas)
+The complete Java version of the TDD micro-exercises and of the proposed solution soon available, porting underway by [peterrhysthomas] (https://github.com/peterrhysthomas).
