@@ -6,10 +6,11 @@ class UnicodeFileToHtmlTextConverter(object):
         self.full_filename_with_path = full_filename_with_path
 
     def convertToHtml(self):
-	    f = open(self.full_filename_with_path, "r")
-	    html = ""
-	    for line in f:
-	        html += cgi.escape(line)
-	        html += "<br />"
-	            
-	    return html
+        f = open(self.full_filename_with_path, "r")
+        html = ""
+        for line in f:
+            line = line.rstrip()
+            html += cgi.escape(line, quote=True)
+            html += "<br />"
+
+        return html
