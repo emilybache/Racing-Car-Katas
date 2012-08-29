@@ -1,26 +1,26 @@
 class StubAlarm(object):
     
-    def __init__(self, alarmOnReturnValue):
-        self.alarmOnReturnValue = alarmOnReturnValue
+    def __init__(self, alarm_onReturnValue):
+        self.alarm_onReturnValue = alarm_onReturnValue
 
-    def setAlarmOn(self, returnValue):
-        self.alarmOnReturnValue = returnValue
+    def set_alarm_on(self, returnValue):
+        self.alarm_onReturnValue = returnValue
 
     def check(self):
         pass
 
-    def isAlarmOn(self):
-        return self.alarmOnReturnValue
+    def is_alarm_on(self):
+        return self.alarm_onReturnValue
         
 
 class MockAlarm(object):
 
     def __init__(self):
-        self.alarmOn = False
-        
+        self.alarm_on = False
+
         self.expectedCheckCallsCount = 0
         self.actualCheckCallsCount = 0
-        
+
         self.expectedAlarmOnCallsCount = 0
         self.actualAlarmOnCallsCount = 0
 
@@ -29,7 +29,7 @@ class MockAlarm(object):
 
     def resetAlarmToOn(self):
         self.expectedAlarmOnCallsCount = 1
-        self.alarmOn = true    
+        self.alarm_on = True
 
     def verify(self):
         if self.expectedAlarmOnCallsCount != self.actualAlarmOnCallsCount:
@@ -41,9 +41,9 @@ class MockAlarm(object):
     def check(self):
         self.actualCheckCallsCount += 1
 
-    def isAlarmOn(self):
+    def is_alarm_on(self):
         self.actualAlarmOnCallsCount += 1
-        return self.alarmOn
+        return self.alarm_on
 
 
 
