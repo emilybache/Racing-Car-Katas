@@ -1,6 +1,6 @@
 import random
 
-class TelemetryClient:
+class TelemetryClient(object):
     DIAGNOSTIC_MESSAGE = "AT#UD"
 
     def __init__(self):
