@@ -21,8 +21,8 @@ The responsibility of the TelemetryDiagnosticControls class is to establish a co
 The TicketDispenser class is designed to be used to manage a queuing system in a shop. There may be more than one ticket dispenser but the same ticket should not be issued to two different customers.
 
 
-## A possible solution
+## After you've had a go yourself
 
-Here you find one of the possible solutions for the exercise: [proposed solution.] (https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/tree/master/TDDMicroExercises.ProposedSolution) 
+Here you find possible solutions for the exercises: [proposed solution.] (https://github.com/emilybache/TDDwithMockObjectsAndDesignPrinciples/tree/master/TDDMicroExercises.ProposedSolution) 
 Feel free to send your comments and questions.
 
