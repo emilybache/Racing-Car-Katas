@@ -5,30 +5,26 @@ class TelemetryClient(object):
 
     def __init__(self):
         self.online_status = False
-        self.diagnostic_message_result = ""
-
-    def get_online_status(self):
-        return self.online_status
+        self._diagnostic_message_result = ""
 
     def connect(self, telemetry_server_connection_string):
-        if (telemetry_server_connection_string is None or telemetry_server_connection_string == ""):
+        if not telemetry_server_connection_string:
             raise Exception()
 
         # simulate the operation on a real modem
         success = random.randint(0, 10) <= 8
-
         self.online_status = success
 
     def disconnect(self):
         self.online_status = False
 
     def send(self, message):
-        if (message is None or message == ""):
+        if not message:
             raise Exception()
 
-        if (message == TelemetryClient.DIAGNOSTIC_MESSAGE):
+        if message == TelemetryClient.DIAGNOSTIC_MESSAGE:
             # simulate a status report
-            self.diagnostic_message_result = """\
+            self._diagnostic_message_result = """\
 LAST TX rate................ 100 MBPS\r\n
 HIGHEST TX rate............. 100 MBPS\r\n
 LAST RX rate................ 100 MBPS\r\n
@@ -48,7 +44,7 @@ Remote Rtrn Count........... 00"""
         # here should go the real Send operation
 
     def receive(self):
-        if (self.diagnostic_message_result is None or self.diagnostic_message_result == ""):
+        if not self._diagnostic_message_result:
             # simulate a received message
             message = ""
             messageLength = random.randint(0, 50) + 60
@@ -57,8 +53,8 @@ Remote Rtrn Count........... 00"""
                 message += chr((random.randint(0, 40) + 86))
                 i -= 1
         else:
-            message = self.diagnostic_message_result
-            self.diagnostic_message_result = ""
+            message = self._diagnostic_message_result
+            self._diagnostic_message_result = ""
 
         return message
 
@@ -66,23 +62,22 @@ class TelemetryDiagnosticControls:
     DiagnosticChannelConnectionString = "*111#"
 
     def __init__(self):
-        self.telemetry_client = TelemetryClient()
+        self._telemetry_client = TelemetryClient()
         self.diagnostic_info = ""
 
     def check_transmission(self):
         self.diagnostic_info = ""
-
-        self.telemetry_client.disconnect()
+        self._telemetry_client.disconnect()
 
         retryLeft = 3
-        while (self.telemetry_client.get_online_status() == False and retryLeft > 0):
-            self.telemetry_client.connect(TelemetryDiagnosticControls.DiagnosticChannelConnectionString)
+        while ((not self._telemetry_client.online_status) and retryLeft > 0):
+            self._telemetry_client.connect(TelemetryDiagnosticControls.DiagnosticChannelConnectionString)
             retryLeft -= 1
 
-        if telemetry_client.get_online_status() == False:
+        if not self._telemetry_client.online_status:
             raise Exception("Unable to connect.")
 
-        self.telemetry_client.send(TelemetryClient.DIAGNOSTIC_MESSAGE)
-        self.diagnostic_info = self.telemetry_client.receive()
+        self._telemetry_client.send(TelemetryClient.DIAGNOSTIC_MESSAGE)
+        self.diagnostic_info = self._telemetry_client.receive()
 
 
