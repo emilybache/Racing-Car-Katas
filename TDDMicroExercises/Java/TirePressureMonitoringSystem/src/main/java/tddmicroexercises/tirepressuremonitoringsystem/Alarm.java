@@ -8,7 +8,6 @@ public class Alarm implements IAlarm
     Sensor sensor = new Sensor();
 
     boolean alarmOn = false;
-    private long alarmCount = 0;
 
     public void check()
     {
@@ -17,7 +16,6 @@ public class Alarm implements IAlarm
         if (psiPressureValue < LowPressureTreshold || HighPressureTreshold < psiPressureValue)
         {
             alarmOn = true;
-            alarmCount += 1;
         }
     }
 
