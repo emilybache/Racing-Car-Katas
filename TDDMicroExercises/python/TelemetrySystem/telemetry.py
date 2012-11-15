@@ -41,11 +41,11 @@ Local Rtrn Count............ 00\r\n
 Remote Rtrn Count........... 00"""
 
             return
-        # here should go the real Send operation
+        # here should go the real Send operation (not needed for this exercise)
 
     def receive(self):
         if not self._diagnostic_message_result:
-            # simulate a received message
+            # simulate a received message (just for illustration - not needed for this exercise)
             message = ""
             messageLength = random.randint(0, 50) + 60
             i = messageLength

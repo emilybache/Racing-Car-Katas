@@ -63,7 +63,7 @@ TelemetryClient.prototype = {
 			return;
 		}
 	
-		// here should go the real Send operation
+		// here should go the real Send operation (not needed for this exercise)
 	},
 	
 	receive: function () {
@@ -71,7 +71,7 @@ TelemetryClient.prototype = {
 
 		if (typeof (this._diagnosticMessageResult) === 'undefined' || this._diagnosticMessageResult === '') {
 
-			// simulate a received message
+			// simulate a received message (just for illustration - not needed for this exercise)
 			message = '';
 			var messageLenght = this._connectionEventsSimulator(50, 110);
 			for(var i = messageLenght; i >=0; --i) {

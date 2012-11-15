@@ -63,7 +63,7 @@ public class TelemetryClient
 			return;
 		}
 
-		// here should go the real Send operation
+		// here should go the real Send operation (not needed for this exercise)
 	}
 
 	public String receive()
@@ -72,7 +72,7 @@ public class TelemetryClient
 
 		if (diagnosticMessageResult == null || "".equals(diagnosticMessageResult))
 		{
-			// simulate a received message
+			// simulate a received message (just for illustration - not needed for this exercise)
 			message = "";
 			int messageLength = connectionEventsSimulator.nextInt(50) + 60;
 			for(int i = messageLength; i >=0; --i)
