@@ -31,7 +31,7 @@ The responsibility of the TelemetryDiagnosticControls class is to establish a co
 You can quickly and easily get going with these problems using the cyber-dojo tool. Click on the relevant link below
 to create a new cyber-dojo practice id with the problem set up ready for your dojo.
 
-1. TirePressureMonitoringSystem in [C#](http://cyber-dojo.com/forker/fork/634DA0F51B?avatar=zebra&tag=12), [Java](http://cyber-dojo.com/forker/fork/1F1871837F?avatar=buffalo&tag=4)
+1. TirePressureMonitoringSystem in [C#](http://cyber-dojo.com/forker/fork/634DA0F51B?avatar=zebra&tag=12), [Java](http://cyber-dojo.com/forker/fork/367B6155BD?avatar=buffalo&tag=4)
 2. UnicodeFileToHtmlTextConverter in [C#](http://cyber-dojo.com/forker/fork/D98B8E5B4B?avatar=moose&tag=8), [Java](http://cyber-dojo.com/forker/fork/6ADDD13EDF?avatar=elephant&tag=4)
 3. TurnTicketDispenser in [C#](http://cyber-dojo.com/forker/fork/BBC507B3D9?avatar=koala&tag=3), [Java](http://cyber-dojo.com/forker/fork/485AF06984?avatar=snake&tag=2)
 4. TelemetrySystem in [C#](http://cyber-dojo.com/forker/fork/5566B141D6?avatar=elephant&tag=3), [Java](http://cyber-dojo.com/forker/fork/7A688DF81A?avatar=wolf&tag=4)
