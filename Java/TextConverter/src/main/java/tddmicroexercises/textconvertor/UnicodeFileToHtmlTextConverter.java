@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-import org.apache.commons.lang.StringEscapeUtils;
+import org.apache.commons.lang3.StringEscapeUtils;
 
 public class UnicodeFileToHtmlTextConverter
 {
@@ -23,9 +23,9 @@ public class UnicodeFileToHtmlTextConverter
 	    String html = "";
 	    while (line != null)
 	    {
-	            html += StringEscapeUtils.escapeHtml(line);
-	            html += "<br />";
-	            line = reader.readLine();
+	    	html += StringEscapeUtils.escapeHtml4(line);
+	        html += "<br />";
+	        line = reader.readLine();
 	    }
 	    return html;
 
