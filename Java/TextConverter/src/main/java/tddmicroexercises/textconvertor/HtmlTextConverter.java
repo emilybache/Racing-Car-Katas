@@ -4,13 +4,11 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-import org.apache.commons.lang3.StringEscapeUtils;
-
-public class UnicodeFileToHtmlTextConverter
+public class HtmlTextConverter
 {
     private String fullFilenameWithPath;
 
-    public UnicodeFileToHtmlTextConverter(String fullFilenameWithPath)
+    public HtmlTextConverter(String fullFilenameWithPath)
     {
         this.fullFilenameWithPath = fullFilenameWithPath;
     }
@@ -23,11 +21,15 @@ public class UnicodeFileToHtmlTextConverter
 	    String html = "";
 	    while (line != null)
 	    {
-	    	html += StringEscapeUtils.escapeHtml4(line);
+	    	html += StringEscapeUtils.escapeHtml(line);
 	        html += "<br />";
 	        line = reader.readLine();
 	    }
 	    return html;
 
     }
+
+	public String getFilename() {
+		return this.fullFilenameWithPath;
+	}
 }

@@ -6,8 +6,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.lang3.StringEscapeUtils;
-
 public class HtmlPagesConverter {
 
 	private String filename;
@@ -42,13 +40,17 @@ public class HtmlPagesConverter {
 	    	if (line.contains("PAGE_BREAK")) {
 	    		break;
 	    	}
-	    	htmlPage.append(StringEscapeUtils.escapeHtml4(line));
+	    	htmlPage.append(StringEscapeUtils.escapeHtml(line));
 	    	htmlPage.append("<br />");
 	        
 	    	line = reader.readLine();
 	    }
 	    reader.close();
 	    return htmlPage.toString();
+	}
+
+	public String getFilename() {
+		return this.filename;
 	}
 	
 }
