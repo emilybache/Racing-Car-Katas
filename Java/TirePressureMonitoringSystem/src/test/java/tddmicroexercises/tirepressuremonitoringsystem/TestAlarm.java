@@ -4,7 +4,7 @@ package tddmicroexercises.tirepressuremonitoringsystem;
 import org.junit.*;
 import static org.junit.Assert.*;
 
-public class UntitledTest {
+public class TestAlarm {
 
     @Test
     public void foo() {
