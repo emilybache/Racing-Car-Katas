@@ -1,15 +1,11 @@
 package tddmicroexercises.braking;
 
 public class Brake {
-    private final AbstractBrakingStrategy strategy;
+    private BrakingStrategy strategy;
     private static double peakForce = 30;
 
-    public Brake(AbstractBrakingStrategy strategy) {
+    public Brake(BrakingStrategy strategy) {
         this.strategy = strategy;
-    }
-
-    public Brake() {
-        this.strategy = new SteadyBrakingStrategy();
     }
 
     public double getPeakForce() {
@@ -21,6 +17,15 @@ public class Brake {
     }
 
     public double powerDissipation(double velocity) {
+        if (this.strategy == null) {
+            if (velocity < 60) {
+                this.strategy = new SteadyBrakingStrategy();
+            } else if (velocity < 120) {
+                this.strategy = new IntervalBrakingStrategy();
+            } else {
+                this.strategy = new FailingBrakingStrategy();
+            }
+        } 
         return strategy.powerDissipation(velocity, this);
     }
 
