@@ -22,7 +22,7 @@ object Sensor  {
 
   private def samplePressure() : Double = {
          // placeholder implementation that simulate a real sensor in a real tire
-         val basicRandomNumbersGenerator = new Random(42)
+         val basicRandomNumbersGenerator = new Random()
          val pressureTelemetryValue = 6 * basicRandomNumbersGenerator.nextDouble() * basicRandomNumbersGenerator.nextDouble()
          return pressureTelemetryValue
      }
