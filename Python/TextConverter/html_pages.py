@@ -1,6 +1,10 @@
 """This is a second, slightly harder problem on the same theme as the first."""
 
+# This is for Python 3
 import html as html_converter
+
+# for Python 2 uncomment this line
+#import cgi as html_converter
 
 class HtmlPagesConverter:
 
