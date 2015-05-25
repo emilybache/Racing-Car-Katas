@@ -26,7 +26,7 @@ class Brake
     @strategy.power_dissipation(velocity, self)
   end
 
-  def force_at_break_level percentage_of_peak_force
+  def force_at_brake_level percentage_of_peak_force
     PEAK_FORCE * percentage_of_peak_force
   end
 
