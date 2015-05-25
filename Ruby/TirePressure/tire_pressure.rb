@@ -7,8 +7,7 @@ class Sensor
     Sensor.OFFSET + self.sample_pressure()
   end
 
-  @staticmethod
-  def sample_pressure
+  def self.sample_pressure
     # placeholder implementation that simulate a real sensor in a real tire
     6 * rand * rand
   end
