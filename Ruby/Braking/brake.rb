@@ -5,11 +5,11 @@ class Brake
   end
   
   def set_peak_force new_value
-    PEAK_FORCE = new_value
+    @@peak_force = new_value
   end
 
   def peak_force
-    PEAK_FORCE
+    @@peak_force
   end
 
   def power_dissipation velocity
@@ -31,5 +31,5 @@ class Brake
   end
 
   private
-  PEAK_FORCE = 30
+  @@peak_force = 30
 end
