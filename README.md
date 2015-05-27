@@ -1,4 +1,5 @@
-# Racing Car Katas
+Racing Car Katas
+=================
 
 In this repository you'll find starting code for four distinct problems. They could be code you inherited from a legacy code-base. Now you want to write unit tests for them, and that is harder than it needs to be. All of the code snippets fail to follow one or more of the SOLID principles.
 
@@ -23,6 +24,8 @@ The TicketDispenser class is designed to be used to manage a queuing system in a
 4. **TelemetrySystem exercise**: write the unit tests for the TelemetryDiagnosticControls class.
 
 The responsibility of the TelemetryDiagnosticControls class is to establish a connection to the telemetry server (through the TelemetryClient), send a diagnostic request and successfully receive the response that contains the diagnostic info. The TelemetryClient class provided for the exercise fakes the behavior of the real TelemetryClient class, and can respond with either the diagnostic information or a random sequence. The real TelemetryClient class would connect and communicate with the telemetry server via tcp/ip.
+
+5. **Braking exercise**: (note this exercise is still being developed) Write the unit tests for the Brake class, and all the various braking strategies.
 
 ## Get going quickly with Cyber-Dojo
 
