@@ -55,6 +55,6 @@ object Leaderboard {
   val race6 = new Race("Fictional Grand Prix 3", List(driver1, driver2, driver4))
 
   val sampleLeaderboard1 = new Leaderboard(List(race1, race2, race3))
-  val sampleLeaderboard2 = new Leaderboard(List(race3, race4, race5))
+  val sampleLeaderboard2 = new Leaderboard(List(race4, race5, race6))
 
 }
