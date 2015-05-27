@@ -27,6 +27,8 @@ The responsibility of the TelemetryDiagnosticControls class is to establish a co
 
 5. **Braking exercise**: (note this exercise is still being developed) Write the unit tests for the Brake class, and all the various braking strategies.
 
+6. **Leaderboard exercise**: (note this exercise is still being developed) Write the unit tests for the Leaderboard class. This class can generate driver and country rankings based on results from a number of races.
+
 ## Get going quickly with Cyber-Dojo
 
 You can quickly and easily get going with these problems using the cyber-dojo tool. Click on the relevant link below
