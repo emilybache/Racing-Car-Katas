@@ -27,7 +27,7 @@ class Brake
   end
 
   def force_at_brake_level percentage_of_peak_force
-    PEAK_FORCE * percentage_of_peak_force
+    @@peak_force * percentage_of_peak_force
   end
 
   private
