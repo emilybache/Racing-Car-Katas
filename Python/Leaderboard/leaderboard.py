@@ -9,13 +9,12 @@ class Leaderboard(object):
     def driver_rankings(self):
         driver_points = defaultdict(int)
         for race in self.races:
-            for driver in race.drivers:
+            for driver in race.results:
                 name = driver.name
-                position = race.results.index(driver)
                 if isinstance(driver, SelfDrivingCar):
                     name = race.driver_name(driver)
                 
-                driver_points[name] += Race.points[position]
+                driver_points[name] += race.points(driver)
 
         rankings = sorted(driver_points.items(), key=lambda x: x[1], reverse=True)
         return [name for (name, points) in rankings]
@@ -23,12 +22,11 @@ class Leaderboard(object):
     def country_rankings(self):
         country_points = defaultdict(int)
         for race in self.races:
-            for driver in race.drivers:
+            for driver in race.results:
                 name = driver.country
                 if isinstance(driver, SelfDrivingCar):
                     continue
-                position = race.results.index(driver)
-                country_points[name] += Race.points[position]
+                country_points[name] += race.points(driver)
             
         rankings = sorted(country_points.items(), key=lambda x: x[1], reverse=True)
         return [name for (name, points) in rankings]
@@ -46,18 +44,20 @@ class SelfDrivingCar(Driver):
         
 class Race(object):
 
-    points = [25, 18, 15]
+    _points = [25, 18, 15]
 
-    def __init__(self, name, drivers):
+    def __init__(self, name, results):
         self.name = name
-        self.drivers = drivers
+        self.results = results
         self.driver_names = {}
-        for driver in drivers:
+        for driver in results:
             name = driver.name
             if isinstance(driver, SelfDrivingCar):
                 name = "Self Driving Car - {} ({})".format(driver.country, driver.algorithm_version)
             self.driver_names[driver] = name
-        self.results = []
+
+    def points(self, driver):
+        return Race._points[self.results.index(driver)]
 
     def driver_name(self, driver):
         return self.driver_names[driver]
