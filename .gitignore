@@ -5,3 +5,6 @@ _ReSharper*/
 *.user
 .DS_Store
 *.pyc
+.idea
+scala/target
+scala/project/target
