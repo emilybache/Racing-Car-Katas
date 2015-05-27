@@ -16,6 +16,10 @@ class Race(val name: String, val results: List[Driver]) {
     results.indexOf(driver)
   }
 
+  def points(driver: Driver): Int = {
+    Race.points(position(driver))
+  }
+
 }
 
 object Race {
