@@ -24,6 +24,9 @@ class LeaderboardTest(unittest.TestCase):
     def test_winner(self):
         self.assertEquals("Lewis Hamilton", sample_leaderboard1.driver_rankings()[0])
 
+    def test_driver_points(self):
+    	self.assertEquals(18+18+25, sample_leaderboard1.driver_points()["Lewis Hamilton"])
+
 class RaceTest(unittest.TestCase):
 
     def test_driver_points(self):

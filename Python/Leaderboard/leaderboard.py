@@ -6,29 +6,16 @@ class Leaderboard(object):
     def __init__(self, races):
         self.races = races
 
-    def driver_rankings(self):
+    def driver_points(self):
         driver_points = defaultdict(int)
         for race in self.races:
             for driver in race.results:
-                name = driver.name
-                if isinstance(driver, SelfDrivingCar):
-                    name = race.driver_name(driver)
-                
+                name = race.driver_name(driver)
                 driver_points[name] += race.points(driver)
+        return driver_points
 
-        rankings = sorted(driver_points.items(), key=lambda x: x[1], reverse=True)
-        return [name for (name, points) in rankings]
-
-    def country_rankings(self):
-        country_points = defaultdict(int)
-        for race in self.races:
-            for driver in race.results:
-                name = driver.country
-                if isinstance(driver, SelfDrivingCar):
-                    continue
-                country_points[name] += race.points(driver)
-            
-        rankings = sorted(country_points.items(), key=lambda x: x[1], reverse=True)
+    def driver_rankings(self):
+        rankings = sorted(self.driver_points().items(), key=lambda x: x[1], reverse=True)
         return [name for (name, points) in rankings]
 
 
