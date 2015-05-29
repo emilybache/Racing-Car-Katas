@@ -4,6 +4,10 @@ import org.scalatest.{Matchers, FlatSpec}
 
 class LeaderboardSpec extends FlatSpec with Matchers {
 
+  it should "sum the points" in {
+    TestData.sampleLeaderboard1.driver_results()("Lewis Hamilton") should equal(18+18+25)
+  }
+
   it should "calculate the winner" in {
     TestData.sampleLeaderboard1.driver_rankings()(0) should equal ("Lewis Hamilton")
   }
