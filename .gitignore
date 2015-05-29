@@ -8,3 +8,4 @@ _ReSharper*/
 .idea
 scala/target
 scala/project/target
+*.iml
