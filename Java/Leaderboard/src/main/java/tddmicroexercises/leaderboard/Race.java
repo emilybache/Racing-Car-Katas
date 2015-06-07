@@ -18,7 +18,7 @@ public class Race
     {
         this.name = name;
         this.results = Arrays.asList(drivers);
-        this.driverNames = new HashMap<Driver, String>();
+        this.driverNames = new HashMap<>();
         for (Driver driver : results)
         {
             String driverName = driver.getName();
@@ -48,5 +48,11 @@ public class Race
     public String getDriverName(Driver driver)
     {
         return this.driverNames.get(driver);
+    }
+    
+    @Override
+    public String toString()
+    {
+        return name;
     }
 }
