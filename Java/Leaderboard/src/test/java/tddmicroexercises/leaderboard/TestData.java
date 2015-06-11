@@ -1,6 +1,7 @@
 package tddmicroexercises.leaderboard;
 
-public class TestData {
+public class TestData
+{
 
     public static Driver driver1;
     public static Driver driver2;
@@ -17,7 +18,8 @@ public class TestData {
     public static Leaderboard sampleLeaderboard1;
     public static Leaderboard sampleLeaderboard2;
 
-    static {
+    static
+    {
         driver1 = new Driver("Nico Rosberg", "DE");
         driver2 = new Driver("Lewis Hamilton", "UK");
         driver3 = new Driver("Sebastian Vettel", "DE");
