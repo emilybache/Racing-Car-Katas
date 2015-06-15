@@ -3,4 +3,5 @@ bin/
 .settings/
 .project
 .classpath
+.checkstyle
 .DS_Store
