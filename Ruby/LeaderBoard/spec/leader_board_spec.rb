@@ -1,5 +1,4 @@
 require_relative '../leader_board'
-require_relative '../race'
 require_relative '../driver'
 require_relative '../self_driving_car'
 describe LeaderBoard do
