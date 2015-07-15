@@ -16,13 +16,19 @@ describe LeaderBoard do
     @driver_4.algorithm_version = "1.3"
     @race_6 = Race.new("Fictional Grand Prix", [@driver_2, @driver_1, @driver_4])
 
-    @sample_leaderboard_1 = LeaderBoard.new([@race_1, @race_2, @race_3])
-    @sample_leaderboard_2 = LeaderBoard.new([@race_4, @race_5, @race_6])
+    @sample_leader_board_1 = LeaderBoard.new([@race_1, @race_2, @race_3])
+    @sample_leader_board_2 = LeaderBoard.new([@race_4, @race_5, @race_6])
   end
   
   context "#winner" do
     it "returns the driver with the most points" do
-      expect(@sample_leaderboard_1.driver_rankings.first).to eq("Lewis Hamilton")
+      expect(@sample_leader_board_1.driver_rankings.first).to eq("Lewis Hamilton")
+    end
+  end
+
+  context "#driver_points" do
+    it "returns the correct number of points for a driver" do
+      expect(@sample_leader_board_2.driver_points["Lewis Hamilton"]).to eq(18 + 18 + 25)
     end
   end
 end
