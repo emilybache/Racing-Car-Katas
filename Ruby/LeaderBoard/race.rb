@@ -10,7 +10,7 @@ class Race
     @results.each do |driver|
       driver_name = driver.name
       if driver.class == SelfDrivingCar
-        driver_name = "Self Driving Car - " + driver.country + " (" + SelfDrivingCar(driver).algorithm_version + ")";
+        driver_name = "Self Driving Car - " + driver.country + " (" + driver.algorithm_version + ")";
       end
       @driver_names[driver] = driver_name
     end
