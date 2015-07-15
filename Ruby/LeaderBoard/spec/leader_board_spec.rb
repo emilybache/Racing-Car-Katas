@@ -1,6 +1,4 @@
 require_relative '../leader_board'
-require_relative '../driver'
-require_relative '../self_driving_car'
 describe LeaderBoard do
   before :each do
     @driver_1 = Driver.new("Nico Rosberg", "DE")

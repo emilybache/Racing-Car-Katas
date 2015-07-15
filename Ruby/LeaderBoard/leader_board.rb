@@ -1,6 +1,3 @@
-require_relative './driver'
-require_relative './self_driving_car'
-
 class LeaderBoard
   def initialize(races)
     @races = races
@@ -21,6 +18,23 @@ class LeaderBoard
   def driver_rankings
     rankings = driver_points.sort_by{|name, points| points}.reverse
     return rankings.collect{|name, points| name}
+  end
+end
+
+class Driver
+  attr_reader :name, :country
+  def initialize(name, country)
+    @name = name
+    @country = country
+  end
+end
+
+class SelfDrivingCar < Driver
+  attr_accessor :algorithm_version
+  def initialize(algorithm_version, company)
+    super
+    @algorithm_version = algorithm_version
+    @company = company
   end
 end
 
