@@ -10,7 +10,7 @@ class LeaderBoard
     @races.each do |race|
       race.results.each do |driver|
         name = race.driver_name(driver)
-        driver_points[name] += race.points(driver) 
+        driver_points[name] = driver_points.fetch(name, 0) + race.points(driver) 
       end
     end
 
@@ -19,6 +19,7 @@ class LeaderBoard
 
   def driver_rankings
     rankings = driver_points.sort_by{|name, points| points}.reverse
-    return rankings.collect{|name, points| names}
+    return rankings.collect{|name, points| name}
   end
 end
+
