@@ -1,4 +1,4 @@
-class TelemetrySystem
+class TelemetryClient
   attr_reader :online_status
 
   DIAGNOSTIC_MESSAGE = "AT#UD"
