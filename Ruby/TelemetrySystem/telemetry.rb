@@ -23,7 +23,7 @@ class TelemetryDiagnostics
       raise Exception.new("Unable to connect.")
     end
 
-    @telemetry_client.send TelemetryClient::DIAGNOSTIC_MESSAGE
+    @telemetry_client.send(TelemetryClient::DIAGNOSTIC_MESSAGE)
     @diagnostic_info = @telemetry_client.receive
   end
 end
