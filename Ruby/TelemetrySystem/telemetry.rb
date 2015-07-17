@@ -1,8 +1,9 @@
 require './client'
 
 class TelemetryDiagnostics
+  attr_reader :diagnostic_info
   DIAGNOSTIC_CHANNEL_CONNECTION_STRING = "*111#"
-
+  
   def initialize
     @telemetry_client = TelemetryClient.new
     @diagnostic_info = ""
