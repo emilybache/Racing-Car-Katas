@@ -47,10 +47,8 @@
     <Compile Include="TelemetrySystem\TelemetryClient.cs" />
     <Compile Include="TelemetrySystem.Tests\TelemetryDiagnosticControlsTest.cs" />
     <Compile Include="TelemetrySystem\TelemetryDiagnosticControls.cs" />
-    <Compile Include="TirePressureMonitoringSystem.Tests\MockAlarm.cs" />
-    <Compile Include="TirePressureMonitoringSystem.Tests\StubAlarm.cs" />
+    <Compile Include="TirePressureMonitoringSystem.Tests\AlarmTest.cs" />
     <Compile Include="TirePressureMonitoringSystem\Alarm.cs" />
-    <Compile Include="TirePressureMonitoringSystem.Tests\IAlarm.cs" />
     <Compile Include="TirePressureMonitoringSystem\Sensor.cs" />
     <Compile Include="TurnTicketDispenser\TicketDispenser.cs" />
     <Compile Include="TurnTicketDispenser\TurnNumberSequence.cs" />
@@ -59,6 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
