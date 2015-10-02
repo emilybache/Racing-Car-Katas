@@ -44,9 +44,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LeaderBoard\Driver.cs" />
+    <Compile Include="LeaderBoard\Leaderboard.cs" />
+    <Compile Include="LeaderBoard.Tests\LeaderboardTest.cs" />
+    <Compile Include="LeaderBoard\Race.cs" />
+    <Compile Include="LeaderBoard.Tests\RaceTest.cs" />
+    <Compile Include="LeaderBoard\SelfDrivingCar.cs" />
     <Compile Include="TelemetrySystem\TelemetryClient.cs" />
     <Compile Include="TelemetrySystem.Tests\TelemetryDiagnosticControlsTest.cs" />
     <Compile Include="TelemetrySystem\TelemetryDiagnosticControls.cs" />
+    <Compile Include="LeaderBoard.Tests\TestData.cs" />
     <Compile Include="TirePressureMonitoringSystem.Tests\AlarmTest.cs" />
     <Compile Include="TirePressureMonitoringSystem\Alarm.cs" />
     <Compile Include="TirePressureMonitoringSystem\Sensor.cs" />
