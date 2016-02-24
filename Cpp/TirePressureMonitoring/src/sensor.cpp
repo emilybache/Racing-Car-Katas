@@ -1,5 +1,4 @@
-#include "sensor.hpp"
-
+#include "sensor.h"
 #include <cstdlib>
 #include <time.h>
 

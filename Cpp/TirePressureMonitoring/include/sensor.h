@@ -1,5 +1,5 @@
-
-using namespace std;
+#ifndef SENSOR__H_
+#define SENSOR__H_
 
 class Sensor
 {
@@ -8,3 +8,5 @@ public:
     double popNextPressurePsiValue();
     
 };
+
+#endif
