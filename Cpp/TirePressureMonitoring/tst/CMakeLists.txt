@@ -4,7 +4,6 @@ include_directories("${CMAKE_SOURCE_DIR}/include")
 
 set(TESTS
   alarm_test.cpp
-  sensor_test.cpp
   )
 
 add_executable(
