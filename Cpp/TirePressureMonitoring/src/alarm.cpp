@@ -1,5 +1,5 @@
-#include "alarm.hpp"
-#include "sensor.hpp"
+#include "alarm.h"
+#include "sensor.h"
 
 Alarm::Alarm()
 {

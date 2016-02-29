@@ -1,6 +1,7 @@
-#include "sensor.hpp"
+#ifndef ALARM__H_
+#define ALARM__H_
 
-using namespace std;
+#include "sensor.h"
 
 class Alarm
 {
@@ -16,3 +17,4 @@ protected:
     bool alarmOn;
 };
 
+#endif // ALARM__H_
