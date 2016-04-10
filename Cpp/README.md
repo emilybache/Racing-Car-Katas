@@ -15,19 +15,19 @@ Build steps to generate makefiles:
 4. cmake ../Source
 5. make
 
-On Windows for VS2012 replace step 3 by:
+On Windows for VS2012 replace step 4 by:
 - cmake -G"Visual Studio 12" ..\Source
 
-On mac for XCode replace step 3 by:
+On mac for XCode replace step 4 by:
 - cmake -G"XCode" ../Source
 
-For Eclipse 4.4 with CDT4 replace step 3 by:
+For Eclipse 4.4 with CDT4 replace step 4 by:
 - cmake -G"Eclipse CDT4 - Unix Makefiles" -D_ECLIPSE_VERSION=4.4 ../Source
 
-For CodeBlocks replace step 3 by:
+For CodeBlocks replace step 4 by:
 - cmake -G"CodeBlocks - Unix Makefiles" ../Source
 
-For CodeListe replace step 3 by:
+For CodeListe replace step 4 by:
 - cmake -G"CodeLite - Unix Makefiles" ../Source
 
 google "cmake generators" if you need something else.
