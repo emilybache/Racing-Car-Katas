@@ -9,11 +9,11 @@ Use your package manager to install or download:
 Binaries are put to "Cpp/Bin" folder.
 
 Build steps to generate makefiles:
-1. Go to Cpp directory
-2. mkdir build
-3. cd build
-4. cmake ../Source
-5. make
+1 Go to Cpp directory
+2 mkdir build
+3 cd build
+4 cmake ../Source
+5 make
 
 On Windows for VS2012 replace step 4 by:
 - cmake -G"Visual Studio 12" ..\Source
