@@ -1,6 +1,6 @@
 Requirements:
-- +CMake
-- +CppUnit
+- CMake
+- CppUnit
 
 Use your package manager to install or download:
 - cmake from: https://cmake.org
@@ -9,25 +9,25 @@ Use your package manager to install or download:
 Binaries are put to "Cpp/Bin" folder.
 
 Build steps to generate makefiles:
-- Go to Cpp directory
-- mkdir build
-- cd build
-- cmake ../Source
-- make
+1. Go to Cpp directory
+2. mkdir build
+3. cd build
+4. cmake ../Source
+5. make
 
-On Windows for VS2012 use:
-- cmake -G"Visual Studio 12" ../Source
+On Windows for VS2012 replace step 3 by:
+- cmake -G"Visual Studio 12" ..\Source
 
-On mac for XCode use:
+On mac for XCode replace step 3 by:
 - cmake -G"XCode" ../Source
 
-For Eclipse 4.4 with CDT4 use:
+For Eclipse 4.4 with CDT4 replace step 3 by:
 - cmake -G"Eclipse CDT4 - Unix Makefiles" -D_ECLIPSE_VERSION=4.4 ../Source
 
-For CodeBlocks use:
+For CodeBlocks replace step 3 by:
 - cmake -G"CodeBlocks - Unix Makefiles" ../Source
 
-For CodeListe use:
+For CodeListe replace step 3 by:
 - cmake -G"CodeLite - Unix Makefiles" ../Source
 
 google "cmake generators" if you need something else.
