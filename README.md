@@ -3,9 +3,9 @@ Racing Car Katas
 
 In this repository you'll find starting code for four distinct problems. They could be code you inherited from a legacy code-base. Now you want to write unit tests for them, and that is harder than it needs to be. All of the code snippets fail to follow one or more of the SOLID principles.
 
-For each exercise, you should identify which SOLID principles are not being followed by the code. There is only one class you are interested in writing tests for right now. As a first step, try to get some kind of test in place before you change the class at all. If the tests are hard to write, is that because of the problems with SOLID principles? 
+For each exercise, you should identify which SOLID principles are not being followed by the code. There is only one class you are interested in writing tests for right now. As a first step, try to get some kind of test in place before you change the class at all. If the tests are hard to write, is that because of the problems with SOLID principles?
 
-When you have some kind of test to lean on, refactor the code and make it testable. Take care when refactoring not to alter the functionality, or change interfaces which other client code may rely on. (Imagine there is client code in another repository that you can't see right now). Add more tests to cover the functionality of the particular class you've been asked to get under test. 
+When you have some kind of test to lean on, refactor the code and make it testable. Take care when refactoring not to alter the functionality, or change interfaces which other client code may rely on. (Imagine there is client code in another repository that you can't see right now). Add more tests to cover the functionality of the particular class you've been asked to get under test.
 
 Apply the unit testing style and framework you are most comfortable with. You can choose to use stubs or mocks or none at all. If you do, you are free to use the mocking tool that you prefer.
 
@@ -25,7 +25,7 @@ You can quickly and easily get going with these problems using the cyber-dojo to
 to create a new cyber-dojo practice id with the problem set up ready for your dojo.
 
 1. TirePressureMonitoringSystem in [C#](http://www.cyber-dojo.org/forker/fork/E21AEC276D?avatar=buffalo&tag=2), [Java](http://www.cyber-dojo.org/forker/fork/140302C80A?avatar=salmon&tag=3), [C++](http://www.cyber-dojo.org/forker/fork/66DE393660?avatar=buffalo&tag=13)
-2. UnicodeFileToHtmlTextConverter in [C#](http://www.cyber-dojo.org/forker/fork/9C9DB9?avatar=raccoon&tag=2), [Java](http://www.cyber-dojo.org/forker/fork/C2BC8A?avatar=buffalo&tag=5), [C++](http://www.cyber-dojo.org/forker/fork/AF903B0945?avatar=hyena&tag=8)
+2. UnicodeFileToHtmlTextConverter in [C#](http://www.cyber-dojo.org/forker/fork/01301E5148?avatar=vulture&tag=10), [Java](http://www.cyber-dojo.org/forker/fork/C2D75B3993?avatar=bee&tag=4), [C++](http://www.cyber-dojo.org/forker/fork/AF903B0945?avatar=hyena&tag=8)
 3. Ticket Dispenser [C++](http://www.cyber-dojo.org/forker/fork/252D7AA030?avatar=porcupine&tag=7)
 4. Telemetry Diagnostic Controls [C++](http://www.cyber-dojo.org/forker/fork/00EE2E79B5?avatar=beetle&tag=7)
 5. Leaderboard [C++](http://www.cyber-dojo.org/forker/fork/257BD4C3E4?avatar=butterfly&tag=18)
