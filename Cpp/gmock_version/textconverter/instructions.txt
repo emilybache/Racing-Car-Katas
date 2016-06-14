@@ -1,0 +1,5 @@
+
+Write more unit tests for the UnicodeFileToHtmTextConverter class.
+
+The HtmlTextConverter class is designed to reformat a
+plain text file for display in a browser.
