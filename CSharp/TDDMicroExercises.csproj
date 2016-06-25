@@ -60,6 +60,7 @@
     <Compile Include="TurnTicketDispenser\TicketDispenser.cs" />
     <Compile Include="TurnTicketDispenser\TurnNumberSequence.cs" />
     <Compile Include="TurnTicketDispenser\TurnTicket.cs" />
+    <Compile Include="UnicodeFileToHtmlTextConverter.Tests\UnicodeFileToHtmlTextConverterTest.cs" />
     <Compile Include="UnicodeFileToHtmTextConverter\UnicodeFileToHtmTextConverter.cs" />
   </ItemGroup>
   <ItemGroup>
