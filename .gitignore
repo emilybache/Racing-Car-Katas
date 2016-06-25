@@ -1,6 +1,13 @@
 bin/
 obj/
 _ReSharper*/
+CSharp/.vs/
+CSharp/packages/
+
+# NCrunch
+CSharp/_NCrunch_*
+CSharp/.*crunch*.local.xml
+
 *.suo
 *.user
 .DS_Store
