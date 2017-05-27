@@ -1,6 +1,6 @@
 
 using NUnit.Framework;
-namespace TDDMicroExercises.UnicodeFileToHtmTextConverter
+namespace TDDMicroExercises.UnicodeFileToHtmlTextConverter
 {
     [TestFixture]
     public class HikerTest
@@ -8,7 +8,7 @@ namespace TDDMicroExercises.UnicodeFileToHtmTextConverter
         [Test]
         public void foobar()
         {
-            UnicodeFileToHtmTextConverter converter = new UnicodeFileToHtmTextConverter("foobar.txt");
+            UnicodeFileToHtmlTextConverter converter = new UnicodeFileToHtmlTextConverter("foobar.txt");
             Assert.AreEqual("fixme", converter.GetFilename());
         }
     }

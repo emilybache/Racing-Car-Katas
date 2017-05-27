@@ -1,10 +1,10 @@
 
 
-UnicodeFileToHtmTextConverter = function(fileBlob) {
+UnicodeFileToHtmlTextConverter = function(fileBlob) {
 	this._fileBlob = fileBlob;
 };
 
-UnicodeFileToHtmTextConverter.prototype = {
+UnicodeFileToHtmlTextConverter.prototype = {
 
 	convertToHtml: function () {
 
@@ -18,7 +18,7 @@ UnicodeFileToHtmTextConverter.prototype = {
 		var htmlLines = this._basicHtmlEncode(text);
 		return htmlLines;
 	},
-	
+
 	_basicHtmlEncode: function (source) {
 
 		var stashNextCharacterAndAdvanceThePointer = function () {

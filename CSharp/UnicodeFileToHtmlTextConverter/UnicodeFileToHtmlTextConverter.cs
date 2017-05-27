@@ -1,14 +1,14 @@
 using System.IO;
 using System.Web;
 
-namespace TDDMicroExercises.UnicodeFileToHtmTextConverter
+namespace TDDMicroExercises.UnicodeFileToHtmlTextConverter
 {
-    public class UnicodeFileToHtmTextConverter
+    public class UnicodeFileToHtmlTextConverter
     {
         private string _fullFilenameWithPath;
 
 
-        public UnicodeFileToHtmTextConverter(string fullFilenameWithPath)
+        public UnicodeFileToHtmlTextConverter(string fullFilenameWithPath)
         {
             _fullFilenameWithPath = fullFilenameWithPath;
         }
