@@ -2,8 +2,8 @@ package tddmicroexercises.tirepressuremonitoringsystem
 
 class Alarm
 {
-    val  LowPressureTreshold : Double = 17
-    val HighPressureTreshold : Double = 21
+    val  LowPressureThreshold : Double = 17
+    val HighPressureThreshold : Double = 21
 
     val sensor = new Sensor()
 
@@ -13,7 +13,7 @@ class Alarm
     {
         val psiPressureValue = sensor.popNextPressurePsiValue()
 
-        if (psiPressureValue < LowPressureTreshold || HighPressureTreshold < psiPressureValue)
+        if (psiPressureValue < LowPressureThreshold || HighPressureThreshold < psiPressureValue)
         {
             alarmOn = true
         }
