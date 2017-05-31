@@ -1,8 +1,8 @@
 
 Alarm = function() {
 
-	this._lowPressureTreshold = 17;
-	this._highPressureTreshold = 21;
+	this._lowPressureThreshold = 17;
+	this._highPressureThreshold = 21;
 	this._sensor = new Sensor();
 	this._alarmOn = false;
 };
@@ -13,7 +13,7 @@ Alarm.prototype = {
 		
 		var psiPressureValue = this._sensor.popNextPressurePsiValue();
 
-		if (psiPressureValue < this._lowPressureTreshold || this._highPressureTreshold < psiPressureValue)
+		if (psiPressureValue < this._lowPressureThreshold || this._highPressureThreshold < psiPressureValue)
 		{
 			this._alarmOn = true;
 		}

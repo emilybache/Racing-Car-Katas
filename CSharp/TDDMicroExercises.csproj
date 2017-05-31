@@ -62,7 +62,7 @@
     <Compile Include="TurnTicketDispenser\TurnNumberSequence.cs" />
     <Compile Include="TurnTicketDispenser\TurnTicket.cs" />
     <Compile Include="UnicodeFileToHtmlTextConverter.Tests\UnicodeFileToHtmlTextConverterTest.cs" />
-    <Compile Include="UnicodeFileToHtmTextConverter\UnicodeFileToHtmTextConverter.cs" />
+    <Compile Include="UnicodeFileToHtmlTextConverter\UnicodeFileToHtmlTextConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

@@ -10,7 +10,7 @@ public:
 
 protected:
     Sensor *m_sensor;
-    double m_lowPressureTreshold;
-    double m_highPressureTreshold;
+    double m_lowPressureThreshold;
+    double m_highPressureThreshold;
     bool m_alarmOn;
 };
