@@ -1,7 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDDMicroExercises", "TDDMicroExercises.csproj", "{BBCF3C67-8E31-48E3-AD2E-8C605E2E07BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDDMicroExercisesTest", "..\TDDMicroExercisesTest\TDDMicroExercisesTest.csproj", "{DDBB0C48-9890-447A-B2EC-52242E41122B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,8 +17,15 @@ Global
 		{BBCF3C67-8E31-48E3-AD2E-8C605E2E07BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBCF3C67-8E31-48E3-AD2E-8C605E2E07BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBCF3C67-8E31-48E3-AD2E-8C605E2E07BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDBB0C48-9890-447A-B2EC-52242E41122B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDBB0C48-9890-447A-B2EC-52242E41122B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDBB0C48-9890-447A-B2EC-52242E41122B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDBB0C48-9890-447A-B2EC-52242E41122B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4457795D-5A52-414B-9025-B4F2D6762EF2}
 	EndGlobalSection
 EndGlobal

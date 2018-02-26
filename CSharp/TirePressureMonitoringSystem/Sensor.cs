@@ -2,7 +2,7 @@ using System;
 
 namespace TDDMicroExercises.TirePressureMonitoringSystem
 {
-    public class Sensor
+    public class Sensor : ISensor
     {
         const double Offset = 16;
 
