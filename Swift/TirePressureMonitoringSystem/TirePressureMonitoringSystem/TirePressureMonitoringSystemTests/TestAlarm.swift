@@ -4,6 +4,6 @@ class TestAlarm: XCTestCase {
     
     func testFoo() {
         let alarm = Alarm()        
-        XCTAssertEqual(false, alarm.isAlarmOn())
+        XCTAssertEqual(false, alarm.isOn)
     }
 }
