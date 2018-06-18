@@ -15,7 +15,7 @@ class Alarm {
         }
     }
 
-    func isAlarmOn() -> Bool {
+    var isOn: Bool {
         return alarmOn
     }
 }
