@@ -3,3 +3,4 @@ build/
 **/test/
 *.compiled_hpp
 *.swp
+build_meson/
