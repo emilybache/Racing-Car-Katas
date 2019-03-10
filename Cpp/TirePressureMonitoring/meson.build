@@ -20,4 +20,12 @@ tirepressure_test = executable('tirepressure_test',
 )
 test('1)  TirePressureMonitoring Google Test', tirepressure_test)
 
+tirepressure_catch2 = executable('tirepressure_catch2',
+       [
+       'tests/Alarm_catch.cpp',
+       ],
+       dependencies : [catch2_dep, tirepressure_dep]
+)
+test('1)  TirePressureMonitoring Catch2 Test', tirepressure_catch2)
+
 

@@ -21,3 +21,11 @@ ticketdispenser_test = executable('TicketDispenser_Test',
        dependencies : [gtest_dep, gmock_dep, ticketdispenser_dep]
 )
 test('3)  TicketDispenser Google Test', ticketdispenser_test)
+
+ticketdispenser_catch2 = executable('TicketDispenser_catch2',
+       [
+       'tests/TicketDispenser_catch.cpp',
+       ],
+       dependencies : [catch2_dep, ticketdispenser_dep]
+)
+test('3)  TicketDispenser Catch Test', ticketdispenser_catch2)

@@ -21,3 +21,13 @@ telemetrysystem_test = executable('TelemetrySystem_Test',
 test('4)  TelemetrySystem Google Test', telemetrysystem_test)
 
 
+
+telemetrysystem_catch2 = executable('TelemetrySystem_catch2',
+       [
+       'tests/TelemetryDiagnosticControls_catch.cpp',
+       ],
+       dependencies : [catch2_dep, telemetrysystem_dep]
+)
+test('4)  TelemetrySystem Catch Test', telemetrysystem_catch2)
+
+

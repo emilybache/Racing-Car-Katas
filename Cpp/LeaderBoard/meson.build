@@ -24,4 +24,12 @@ leaderboard_test = executable('LeaderBoard_Test',
 )
 test('5)  LeaderBoard Google Test', leaderboard_test)
 
+leaderboard_catch2 = executable('LeaderBoard_catch2',
+       [
+       'tests/LeaderBoard_catch.cpp',
+       ],
+       dependencies : [catch2_dep, leaderboard_dep]
+)
+test('5)  LeaderBoard Catch Test', leaderboard_catch2)
+
 
