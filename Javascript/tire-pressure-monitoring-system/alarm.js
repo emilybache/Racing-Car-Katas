@@ -1,3 +1,4 @@
+const { Sensor } = require('./sensor.js');
 
 Alarm = function() {
 
@@ -24,3 +25,5 @@ Alarm.prototype = {
 	}
 
 };
+
+module.exports = { Alarm };

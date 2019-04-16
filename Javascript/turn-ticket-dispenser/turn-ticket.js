@@ -10,3 +10,4 @@ TurnTicket.prototype = {
 	}
 };
 
+module.exports = { TurnTicket };

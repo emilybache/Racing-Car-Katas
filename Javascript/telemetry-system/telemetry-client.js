@@ -86,3 +86,5 @@ TelemetryClient.prototype = {
 		return message;
 	}
 };
+
+module.exports = { TelemetryClient };

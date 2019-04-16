@@ -6,3 +6,4 @@ TurnNumberSequence = {
 	}
 };
 
+module.exports = { TurnNumberSequence };

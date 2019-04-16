@@ -1,3 +1,4 @@
+const { TelemetryClient } = require('./telemetry-client.js');
 
 TelemetryDiagnosticControls = function() {
 
@@ -36,3 +37,5 @@ TelemetryDiagnosticControls.prototype = {
 		this._diagnosticInfo = this._telemetryClient.receive();
 	}
 };
+
+module.exports = { TelemetryDiagnosticControls };

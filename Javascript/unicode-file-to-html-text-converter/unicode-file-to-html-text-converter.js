@@ -69,3 +69,5 @@ UnicodeFileToHtmlTextConverter.prototype = {
 		return result;
 	}
 };
+
+module.exports = { UnicodeFileToHtmlTextConverter };

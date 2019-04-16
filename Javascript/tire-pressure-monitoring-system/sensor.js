@@ -18,3 +18,5 @@ Sensor.prototype = {
 		return Sensor.Offset() + pressureTelemetryValue;
 	}
 };
+
+module.exports = { Sensor };
