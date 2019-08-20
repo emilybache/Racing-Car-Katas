@@ -17,4 +17,10 @@ public class RaceTest {
         Assert.assertEquals(15, TestData.race1.getPoints(TestData.driver3));
     }
 
+    @Test
+    public void testDriverName() {
+        Race race = new Race("test", TestData.driver1, TestData.driver4);
+        Assert.assertEquals("Nico Rosberg", race.getDriverName(TestData.driver1));
+        Assert.assertEquals("Self Driving Car - Acme (1.3)", race.getDriverName(TestData.driver4));
+    }
 }

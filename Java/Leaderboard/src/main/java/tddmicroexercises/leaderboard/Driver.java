@@ -5,16 +5,16 @@ public class Driver {
     private final String name;
     private final String country;
 
-    public Driver(String name, String country) {
+    Driver(String name, String country) {
         this.name = name;
         this.country = country;
     }
 
-    public String getName() {
+    String getName() {
         return name;
     }
 
-    public String getCountry() {
+    String getCountry() {
         return country;
     }
 
@@ -28,10 +28,15 @@ public class Driver {
         if (this == obj) {
             return true;
         }
-        if (obj == null || !(obj instanceof Driver)) {
+        if (!(obj instanceof Driver)) {
             return false;
         }
         Driver other = (Driver) obj;
         return this.name.equals(other.name) && this.country.equals(other.country);
+    }
+
+    @Override
+    public String toString() {
+        return name;
     }
 }

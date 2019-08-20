@@ -1,44 +1,49 @@
 package tddmicroexercises.leaderboard;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Race {
 
     private static final Integer[] POINTS = new Integer[]{25, 18, 15};
 
     private final String name;
-    private final List<Driver> results;
+    private final List<Result> results;
     private final Map<Driver, String> driverNames;
+    private List<Driver> driverList;
 
-    public Race(String name, Driver... drivers) {
+    Race(String name, Driver... drivers) {
+        driverList = Arrays.asList(drivers);
         this.name = name;
-        this.results = Arrays.asList(drivers);
+        List<Result> list = new ArrayList<>();
+        for (Driver driver : drivers) {
+            Result result1 = new Result(driver, driverList.indexOf(driver), getPoints(driver));
+            list.add(result1);
+        }
+        this.results = list;
         this.driverNames = new HashMap<>();
-        for (Driver driver : results) {
-            String driverName = driver.getName();
-            if (driver instanceof SelfDrivingCar) {
-                driverName = "Self Driving Car - " + driver.getCountry() + " (" + ((SelfDrivingCar) driver).getAlgorithmVersion() + ")";
-            }
-            this.driverNames.put(driver, driverName);
+        for (Result result : results) {
+            this.driverNames.put(result.getDriver(), result.getDriver().getName());
         }
     }
 
-    public int position(Driver driver) {
-        return this.results.indexOf(driver);
+    private int position(Driver driver) {
+        return this.driverList.indexOf(driver);
+//        return this.results.stream()
+//                .filter(Predicate.isEqual(driver))
+//                .findFirst()
+//                .map(Result::getPosition)
+//                .orElse(0);
     }
 
-    public int getPoints(Driver driver) {
+    int getPoints(Driver driver) {
         return Race.POINTS[position(driver)];
     }
 
-    public List<Driver> getResults() {
+    List<Result> getResults() {
         return results;
     }
 
-    public String getDriverName(Driver driver) {
+    String getDriverName(Driver driver) {
         return this.driverNames.get(driver);
     }
 

@@ -8,9 +8,7 @@ import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import static tddmicroexercises.leaderboard.TestData.driver1;
-import static tddmicroexercises.leaderboard.TestData.driver2;
-import static tddmicroexercises.leaderboard.TestData.driver3;
+import static tddmicroexercises.leaderboard.TestData.*;
 
 public class LeaderboardTest {
 
@@ -19,7 +17,8 @@ public class LeaderboardTest {
         // setup
 
         // act
-        Map<String, Integer> results = TestData.sampleLeaderboard1.driverResults();
+        final Leaderboard sampleLeaderboard = TestData.sampleLeaderboard1;
+        Map<String, Integer> results = sampleLeaderboard.driverResults();
 
         // verify
         assertTrue("results " + results, results.containsKey("Lewis Hamilton"));
