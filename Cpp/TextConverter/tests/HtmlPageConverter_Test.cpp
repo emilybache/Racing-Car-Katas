@@ -2,7 +2,9 @@
 #include "HtmlPagesConverter.h"
 
 namespace {
-  TEST(Alarm, TDB) {
+  TEST(Alarm, Foo) {
+        auto converter = new HtmlPagesConverter("foo");
+        ASSERT_EQ("fixme", converter->getFilename());
   }
 }
 

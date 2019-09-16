@@ -55,15 +55,4 @@ add_subdirectory(TurnTicketDispenser)
 add_subdirectory(TelemetrySystem)
 add_subdirectory(LeaderBoard)
 
-## Test for gcovr
-SETUP_TARGET_FOR_COVERAGE_GCOVR_HTML(
-    NAME test_coverage
-    EXECUTABLE ctest -j ${PROCESSOR_COUNT}
-    DEPENDENCIES TirePressureMonitoring_Test_Gmock
-                 HtmlTextConverter_Test_Gmock
-                 HtmlPageConverter_Test_Gmock
-                 TicketDispenser_Test_Gmock
-                 TelemetryDiagnosticControls_Test_Gmock
-                 LeaderBoard_Test_Gmock
-    )
 
