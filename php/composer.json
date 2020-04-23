@@ -1,0 +1,12 @@
+{
+    "name": "Racing Car Kata",
+    "description": "A kata to practice SOLID patterns",
+    "autoload": {
+        "psr-4": {
+            "RacingCar\\": "src/"
+        }
+    },
+    "require": {
+        "phpunit/phpunit": "^8.0"
+    }
+}
