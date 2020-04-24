@@ -14,6 +14,6 @@ class Sensor
 
     private static function getSamplePressure()
     {
-        return 6 * rand() * rand();
+        return 6 * (mt_rand() / mt_getrandmax()) * (mt_rand() / mt_getrandmax());
     }
 }
