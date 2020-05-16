@@ -1,15 +1,19 @@
 <?php
 
+declare(strict_types=1);
+
+namespace Tests\Leaderboard;
+
 use PHPUnit\Framework\TestCase;
 use RacingCar\Leaderboard\Race;
 use RacingCar\Leaderboard\Driver;
 
 class RaceTest extends TestCase
 {
-    private Driver $driver1;
-    private Driver $driver2;
-    private Driver $driver3;
-    private Race $race1;
+    private $driver1;
+    private $driver2;
+    private $driver3;
+    private $race1;
 
     public function setUp(): void
     {

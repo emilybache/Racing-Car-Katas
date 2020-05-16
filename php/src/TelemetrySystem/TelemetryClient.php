@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace RacingCar\TelemetrySystem;
 
@@ -8,8 +9,8 @@ use InvalidArgumentException;
 class TelemetryClient
 {
     public const DIAGNOSTIC_MESSAGE = "AT#UD";
-    private bool $onlineStatus = false;
-    private bool $diagnosticMessageJustSent = false;
+    private $onlineStatus = false;
+    private $diagnosticMessageJustSent = false;
 
     /**
      * @param string $telemetryServerConnectionString

@@ -1,11 +1,12 @@
 <?php
+declare(strict_types=1);
 
 namespace RacingCar\Leaderboard;
 
 class Driver
 {
-    public ?string $name;
-    public string $country;
+    public $name;
+    public $country;
 
     /**
      * Driver constructor.

@@ -1,10 +1,11 @@
 <?php
+declare(strict_types=1);
 
 namespace RacingCar\TurnTicketDispenser;
 
 class TurnTicket
 {
-    private int $turnNumber;
+    private $turnNumber;
 
     public function __construct(int $turnNumber)
     {

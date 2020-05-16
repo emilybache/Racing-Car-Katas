@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace RacingCar\TelemetrySystem;
 
@@ -8,8 +9,8 @@ class TelemetryDiagnostics
 {
     public const DIAGNOSTIC_CHANNEL_CONNECTION_STRING = "*111#";
 
-    private TelemetryClient $telemetryClient;
-    public string $diagnosticInfo = "";
+    private $telemetryClient;
+    public $diagnosticInfo = "";
 
     public function __construct()
     {

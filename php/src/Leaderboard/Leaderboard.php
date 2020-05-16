@@ -1,11 +1,12 @@
 <?php
+declare(strict_types=1);
 
 namespace RacingCar\Leaderboard;
 
 class Leaderboard
 {
     /** @var Race[] */
-    private array $races;
+    private $races;
 
     /**
      * Leaderboard constructor.

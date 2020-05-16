@@ -1,13 +1,14 @@
 <?php
+declare(strict_types=1);
 
 namespace RacingCar\Leaderboard;
 
 class Race
 {
-    private static array $points = [25, 18, 15];
-    private string $name;
-    private array $drivers;
-    private array $driverNames;
+    private static $points = [25, 18, 15];
+    private $name;
+    private $drivers;
+    private $driverNames;
 
     /**
      * @param string $name
