@@ -1,12 +1,34 @@
 {
-    "name": "Racing Car Kata",
+    "name": "emilybache/racing-car-kata",
     "description": "A kata to practice SOLID patterns",
+    "require": {
+        "php": "^7.2"
+    },
     "autoload": {
         "psr-4": {
             "RacingCar\\": "src/"
         }
     },
-    "require": {
-        "phpunit/phpunit": "^8.0"
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0",
+        "phpstan/phpstan": "^0.12.23",
+        "phpstan/phpstan-phpunit": "^0.12.8",
+        "symplify/easy-coding-standard": "^7.3",
+        "symplify/phpstan-extensions": "^7.3"
+    },
+    "scripts": {
+        "checkcode": "phpcs src tests --standard=PSR12",
+        "fixcode": "phpcbf src tests --standard=PSR12",
+        "test": "phpunit",
+        "tests": "phpunit",
+        "test-coverage": "phpunit --coverage-html build/coverage",
+        "check-cs": "ecs check src tests --ansi",
+        "fix-cs": "ecs check src tests --fix --ansi",
+        "phpstan": "phpstan analyse --ansi"
     }
 }

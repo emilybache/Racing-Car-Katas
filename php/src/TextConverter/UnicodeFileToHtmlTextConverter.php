@@ -1,10 +1,11 @@
 <?php
+declare(strict_types=1);
 
 namespace RacingCar\TextConverter;
 
 class UnicodeFileToHtmlTextConverter
 {
-    private string $fullFileNameWithPath;
+    private $fullFileNameWithPath;
 
     public function __construct(string $fullFileNameWithPath)
     {

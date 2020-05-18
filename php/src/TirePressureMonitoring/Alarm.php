@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace RacingCar\TirePressureMonitoring;
 
@@ -6,8 +7,8 @@ class Alarm
 {
     private const LOW_PRESSURE_THRESHOLD = 17;
     private const HIGH_PRESSURE_THRESHOLD = 21;
-    private bool $isAlarmOn = false;
-    private Sensor $sensor;
+    private $isAlarmOn = false;
+    private $sensor;
 
     public function __construct()
     {

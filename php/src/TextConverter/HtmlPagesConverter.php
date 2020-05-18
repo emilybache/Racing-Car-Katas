@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace RacingCar\TextConverter;
 
@@ -10,8 +11,8 @@ namespace RacingCar\TextConverter;
  */
 class HtmlPagesConverter
 {
-    private string $filename;
-    private array $breaks;
+    private $filename;
+    private $breaks;
 
     /**
      * HtmlPages constructor.

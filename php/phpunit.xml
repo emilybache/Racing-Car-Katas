@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+>
+    <testsuites>
+        <testsuite name="Leaderboard">
+            <directory>./tests/Leaderboard</directory>
+        </testsuite>
+        <testsuite name="TelemetrySystem">
+            <directory>./tests/TelemetrySystem</directory>
+        </testsuite>
+        <testsuite name="TextConverter">
+            <directory>./tests/TextConverter</directory>
+        </testsuite>
+        <testsuite name="TirePressureMonitoring">
+            <directory>./tests/TirePressureMonitoring</directory>
+        </testsuite>
+        <testsuite name="TurnTicketDispenser">
+            <directory>./tests/TurnTicketDispenser</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./src</directory>
+        </whitelist>
+    </filter>
+</phpunit>
