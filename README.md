@@ -19,17 +19,6 @@ Apply the unit testing style and framework you are most comfortable with. You ca
 
 5. **Leaderboard exercise**: (note this exercise is still being developed) Write the unit tests for the Leaderboard class, including races with self driving cars. The Leaderboard calculates driver points and rankings based on results from a number of races.
 
-## Get going quickly with Cyber-Dojo
-
-You can quickly and easily get going with these problems using the cyber-dojo tool. Click on the relevant link below
-to create a new cyber-dojo practice id with the problem set up ready for your dojo.
-
-1. TirePressureMonitoringSystem in [C#](http://www.cyber-dojo.org/forker/fork/E21AEC276D?avatar=buffalo&tag=2), [Java](http://www.cyber-dojo.org/forker/fork/140302C80A?avatar=salmon&tag=3), [C++](http://www.cyber-dojo.org/forker/fork/66DE393660?avatar=buffalo&tag=13)
-2. UnicodeFileToHtmlTextConverter in [C#](http://www.cyber-dojo.org/forker/fork/01301E5148?avatar=vulture&tag=10), [Java](http://www.cyber-dojo.org/forker/fork/C2D75B3993?avatar=bee&tag=4), [C++](http://www.cyber-dojo.org/forker/fork/AF903B0945?avatar=hyena&tag=8)
-3. Ticket Dispenser [C++](http://www.cyber-dojo.org/forker/fork/252D7AA030?avatar=porcupine&tag=7)
-4. Telemetry Diagnostic Controls [C++](http://www.cyber-dojo.org/forker/fork/00EE2E79B5?avatar=beetle&tag=7)
-5. Leaderboard [C++](http://www.cyber-dojo.org/forker/fork/257BD4C3E4?avatar=butterfly&tag=18)
-
 
 ## TDD with Mock Objects: Design Principles and Emerging Properties
 
