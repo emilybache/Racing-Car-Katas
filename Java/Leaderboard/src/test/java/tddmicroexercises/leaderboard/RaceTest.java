@@ -1,7 +1,8 @@
 package tddmicroexercises.leaderboard;
 
-import org.junit.Assert;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
 
 public class RaceTest {
 
@@ -12,9 +13,9 @@ public class RaceTest {
         // act
 
         // verify
-        Assert.assertEquals(25, TestData.race1.getPoints(TestData.driver1));
-        Assert.assertEquals(18, TestData.race1.getPoints(TestData.driver2));
-        Assert.assertEquals(15, TestData.race1.getPoints(TestData.driver3));
+        assertEquals(25, TestData.race1.getPoints(TestData.driver1));
+        assertEquals(18, TestData.race1.getPoints(TestData.driver2));
+        assertEquals(15, TestData.race1.getPoints(TestData.driver3));
     }
 
 }
