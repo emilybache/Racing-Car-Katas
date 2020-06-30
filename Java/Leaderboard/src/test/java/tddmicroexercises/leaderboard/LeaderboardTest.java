@@ -1,16 +1,16 @@
 package tddmicroexercises.leaderboard;
 
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static tddmicroexercises.leaderboard.TestData.driver1;
+import static tddmicroexercises.leaderboard.TestData.driver2;
+import static tddmicroexercises.leaderboard.TestData.driver3;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-import static tddmicroexercises.leaderboard.TestData.driver1;
-import static tddmicroexercises.leaderboard.TestData.driver2;
-import static tddmicroexercises.leaderboard.TestData.driver3;
+import org.junit.jupiter.api.Test;
 
 public class LeaderboardTest {
 
@@ -22,7 +22,7 @@ public class LeaderboardTest {
         Map<String, Integer> results = TestData.sampleLeaderboard1.driverResults();
 
         // verify
-        assertTrue("results " + results, results.containsKey("Lewis Hamilton"));
+        assertTrue(results.containsKey("Lewis Hamilton"), "results " + results);
         assertEquals(18 + 18 + 25, (int) results.get("Lewis Hamilton"));
     }
 
