@@ -13,6 +13,5 @@ namespace TDDMicroExercises.TurnTicketDispenser
         {
             get { return _turnNumber; }
         }
-
     }
 }
