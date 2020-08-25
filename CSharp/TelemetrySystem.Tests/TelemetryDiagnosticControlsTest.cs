@@ -1,14 +1,12 @@
-using NUnit.Framework;
+using Xunit;
 
 namespace TDDMicroExercises.TelemetrySystem.Tests
 {
-    [TestFixture]
     public class TelemetryDiagnosticControlsTest
     {
-        [Test]
+        [Fact]
         public void CheckTransmission_should_send_a_diagnostic_message_and_receive_a_status_message_response()
         {
         }
-
     }
 }
