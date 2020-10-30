@@ -1,32 +1,26 @@
 package tddmicroexercises.telemetrysystem
 
-class TelemetryDiagnosticControls {
-    private val DiagnosticChannelConnectionString = "*111#"
+import tddmicroexercises.telemetrysystem.DefaultStreamData.Companion.DIAGNOSTIC_MESSAGE
 
-    private val telemetryClient: TelemetryClient
+class TelemetryDiagnosticControls(
+    private val telemetryClient: TelemetryClient = TelemetryClient()
+) {
     var diagnosticInfo = ""
-
-    init {
-        telemetryClient = TelemetryClient()
-    }
 
     @Throws(Exception::class)
     fun checkTransmission() {
-        diagnosticInfo = ""
-
+        resetDiagnosticInfo()
         telemetryClient.disconnect()
-
-        var retryLeft = 3
-        while (telemetryClient.onlineStatus == false && retryLeft > 0) {
-            telemetryClient.connect(DiagnosticChannelConnectionString)
-            retryLeft -= 1
-        }
-
-        if (telemetryClient.onlineStatus == false) {
-            throw Exception("Unable to connect.")
-        }
-
-        telemetryClient.send(TelemetryClient.DIAGNOSTIC_MESSAGE)
+        telemetryClient.attemptConnectionToClient(DIAGNOSTIC_CHANNEL_CONNECTION)
+        telemetryClient.send(DIAGNOSTIC_MESSAGE)
         diagnosticInfo = telemetryClient.receive()
+    }
+
+    private fun resetDiagnosticInfo() {
+        diagnosticInfo = ""
+    }
+
+    companion object {
+        private const val DIAGNOSTIC_CHANNEL_CONNECTION = "*111#"
     }
 }
