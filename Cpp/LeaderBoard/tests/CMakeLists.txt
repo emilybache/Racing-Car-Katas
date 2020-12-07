@@ -10,7 +10,6 @@ target_link_libraries(LeaderBoard_Test_Gmock
 		${CMAKE_THREAD_LIBS_INIT}
 		)
 set_property(TARGET LeaderBoard_Test_Gmock PROPERTY CXX_STANDARD 14)
-add_dependencies(LeaderBoard_Test_Gmock aprovaltest)
-add_test(NAME LeaderBoard_Test_Gmock COMMAND LeaderBoard_Test_Gmock)
-
+add_dependencies(LeaderBoard_Test_Gmock ApprovalTests)
+gtest_discover_tests(LeaderBoard_Test_Gmock)
 

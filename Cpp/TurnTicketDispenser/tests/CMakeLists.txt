@@ -11,6 +11,5 @@ target_link_libraries(TicketDispenser_Test_Gmock
 		${CMAKE_THREAD_LIBS_INIT}
 		)
 set_property(TARGET TicketDispenser_Test_Gmock PROPERTY CXX_STANDARD 14)
-add_dependencies(TicketDispenser_Test_Gmock aprovaltest)
-add_test(NAME TicketDispenser_Test_Gmock COMMAND TicketDispenser_Test_Gmock)
-
+add_dependencies(TicketDispenser_Test_Gmock ApprovalTests)
+gtest_discover_tests(TicketDispenser_Test_Gmock)

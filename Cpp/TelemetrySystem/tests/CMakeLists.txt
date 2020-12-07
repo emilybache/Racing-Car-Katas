@@ -10,6 +10,6 @@ target_link_libraries(TelemetryDiagnosticControls_Test_Gmock
 		${CMAKE_THREAD_LIBS_INIT}
 		)
 set_property(TARGET TelemetryDiagnosticControls_Test_Gmock PROPERTY CXX_STANDARD 14)
-add_dependencies(TelemetryDiagnosticControls_Test_Gmock aprovaltest)
-add_test(NAME TelemetryDiagnosticControls_Test_Gmock COMMAND TelemetryDiagnosticControls_Test_Gmock)
+add_dependencies(TelemetryDiagnosticControls_Test_Gmock ApprovalTests)
+gtest_discover_tests(TelemetryDiagnosticControls_Test_Gmock)
 

@@ -6,10 +6,9 @@ CMake Build
 
 ### Needed tools
 
-* CMake: Althou not tested on 3.5 it shouldn't (knowinly) use anyhting
-  thet not works on this version, lowet tested version is 3.10.
-* C++ compiler supporting C++-14 reconized by CMake > 3.5:ish
-* gcovr - to collect coverage from tests
+* CMake: Although not tested on 3.14 it shouldn't (knowingly) use anything
+  that not works on this version, the lowest tested version is 3.17.
+* C++ compiler supporting C++-14 recognized by CMake > 3.5:ish
 
 ### Quick start
 
@@ -17,19 +16,17 @@ CMake Build
 ./run-once-cmake.sh
 ```
 
-Coverage report in build/test\_coverage/index.html
-
 ### Tested on
 
- * Ununtu 18.04 - CMake 3.10
- * macOS Mojave - Cmake 3.12
+ * macOS Big Sur - Cmake 3.17
 
 
 ### Random notes
 
 Will download and use googletest (including googlemock)
+Will download and possible use approval test
 
-bash-script for convinience build and test
+bash-script for convenience build and test
 
 
 ### Nice things to solve in future

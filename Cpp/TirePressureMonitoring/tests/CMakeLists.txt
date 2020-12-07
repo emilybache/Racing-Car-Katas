@@ -11,5 +11,6 @@ target_link_libraries(TirePressureMonitoring_Test_Gmock
 		${CMAKE_THREAD_LIBS_INIT}
 )
 set_property(TARGET TirePressureMonitoring_Test_Gmock PROPERTY CXX_STANDARD 14)
-add_dependencies(TirePressureMonitoring_Test_Gmock aprovaltest)
-add_test(NAME TirePressureMonitoring_Test_Gmock COMMAND TirePressureMonitoring_Test_Gmock)
+add_dependencies(TirePressureMonitoring_Test_Gmock ApprovalTests)
+gtest_discover_tests(TirePressureMonitoring_Test_Gmock)
+
