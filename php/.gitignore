@@ -13,3 +13,5 @@ composer.phar
 .settings
 .buildpath
 .project
+
+.vscode/
