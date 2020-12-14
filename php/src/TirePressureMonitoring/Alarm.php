@@ -7,8 +7,10 @@ class Alarm
 {
     private const LOW_PRESSURE_THRESHOLD = 17;
     private const HIGH_PRESSURE_THRESHOLD = 21;
-    private $isAlarmOn = false;
+
     private $sensor;
+
+    private $isAlarmOn = false;
 
     public function __construct()
     {
@@ -18,6 +20,7 @@ class Alarm
     public function check()
     {
         $psiPressureValue = $this->sensor->popNextPressurePsiValue();
+
         if ($psiPressureValue < self::LOW_PRESSURE_THRESHOLD || self::HIGH_PRESSURE_THRESHOLD < $psiPressureValue)
         {
             $this->isAlarmOn = true;
