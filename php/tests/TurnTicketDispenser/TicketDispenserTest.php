@@ -7,12 +7,12 @@ namespace Tests\TurnTicketDispenser;
 use PHPUnit\Framework\TestCase;
 use RacingCar\TurnTicketDispenser\TicketDispenser;
 
-class TurnTicketTest extends TestCase
+class TicketDispenserTest extends TestCase
 {
-    public function testDoSomething()
+    public function testFoo()
     {
         $dispenser = new TicketDispenser();
         $ticket = $dispenser->getTurnTicket();
-        $this->markTestIncomplete();
+        $this->assertEquals(-1, $ticket->getTurnNumber());
     }
 }
