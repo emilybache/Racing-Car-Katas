@@ -4,48 +4,46 @@ TelemetryClient = function() {
 	this._diagnosticMessageResult = '';
 };
 
-TelemetryClient.diagnosticMessage = function () {
+TelemetryClient.diagnosticMessage = function() {
 	return 'AT#UD';
 };
 
 TelemetryClient.prototype = {
 
+	onlineStatus: function() {
+		return this._onlineStatus;
+	},
+
 	// simulate the operation on a real modem
-	_connectionEventsSimulator: function (min, max) {
+	_connectionEventsSimulator: function(min, max) {
 		var delta = max + 1 - min;
 		return min + Math.floor(delta * Math.random());
 	},
 
-	onlineStatus: function () {
-		return this._onlineStatus;
-	},
-	
 	connect: function(telemetryServerConnectionString) {
-			if (typeof(telemetryServerConnectionString) === 'undefined' || telemetryServerConnectionString === '') {
-				throw 'missing telemetryServerConnectionString parameter';
-			}
+		if (typeof (telemetryServerConnectionString) === 'undefined' || telemetryServerConnectionString === '') {
+			throw 'missing telemetryServerConnectionString parameter';
+		}
 
-			// simulate the operation on a real modem
-			var success = this._connectionEventsSimulator(1, 10) <= 8;
+		// simulate the operation on a real modem
+		var success = this._connectionEventsSimulator(1, 10) <= 8;
 
-			this._onlineStatus = success;
+		this._onlineStatus = success;
 	},
-	
-	disconnect: function () {
+
+	disconnect: function() {
 		this._onlineStatus = false;
 	},
 
-	send: function (message) {
-		if (typeof(message) === 'undefined' || message === '')
-		{
+	send: function(message) {
+		if (typeof (message) === 'undefined' || message === '') {
 			throw 'missing message parameter';
 		}
 
-		if (message === TelemetryClient.diagnosticMessage())
-		{
+		if (message === TelemetryClient.diagnosticMessage()) {
 			// simulate a status report
 			this._diagnosticMessageResult =
-					'LAST TX rate................ 100 MBPS\r\n'
+				'LAST TX rate................ 100 MBPS\r\n'
 				+ 'HIGHEST TX rate............. 100 MBPS\r\n'
 				+ 'LAST RX rate................ 100 MBPS\r\n'
 				+ 'HIGHEST RX rate............. 100 MBPS\r\n'
@@ -62,22 +60,22 @@ TelemetryClient.prototype = {
 
 			return;
 		}
-	
+
 		// here should go the real Send operation (not needed for this exercise)
 	},
-	
-	receive: function () {
-		var  message;
+
+	receive: function() {
+		var message;
 
 		if (typeof (this._diagnosticMessageResult) === 'undefined' || this._diagnosticMessageResult === '') {
 
 			// simulate a received message (just for illustration - not needed for this exercise)
 			message = '';
-			var messageLenght = this._connectionEventsSimulator(50, 110);
-			for(var i = messageLenght; i >=0; --i) {
+			var messageLength = this._connectionEventsSimulator(50, 110);
+			for (var i = messageLength; i >= 0; --i) {
 				message += this._connectionEventsSimulator(40, 126).toString();
 			}
-		} 
+		}
 		else {
 			message = this._diagnosticMessageResult;
 			this._diagnosticMessageResult = '';
@@ -86,3 +84,5 @@ TelemetryClient.prototype = {
 		return message;
 	}
 };
+
+module.exports = TelemetryClient;
