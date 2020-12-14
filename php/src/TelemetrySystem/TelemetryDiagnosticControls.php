@@ -5,7 +5,7 @@ namespace RacingCar\TelemetrySystem;
 
 use Exception;
 
-class TelemetryDiagnostics
+class TelemetryDiagnosticControls
 {
     public const DIAGNOSTIC_CHANNEL_CONNECTION_STRING = "*111#";
 
@@ -23,17 +23,19 @@ class TelemetryDiagnostics
     public function checkTransmission()
     {
         $this->diagnosticInfo = "";
+
         $this->telemetryClient->disconnect();
 
         $retryLeft = 3;
         while($this->telemetryClient->getOnlineStatus() === false and $retryLeft > 0)
         {
-            $this->telemetryClient->connect(TelemetryDiagnostics::DIAGNOSTIC_CHANNEL_CONNECTION_STRING);
+            $this->telemetryClient->connect(TelemetryDiagnosticControls::DIAGNOSTIC_CHANNEL_CONNECTION_STRING);
             $retryLeft -= 1;
         }
 
-        if ($this->telemetryClient->getOnlineStatus() === false)
+        if ($this->telemetryClient->getOnlineStatus() === false) {
             throw new Exception("Unable to connect.");
+        }
 
         $this->telemetryClient->send(TelemetryClient::DIAGNOSTIC_MESSAGE);
         $this->diagnosticInfo = $this->telemetryClient->receive();

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Tests\TelemetrySystem;
 
 use PHPUnit\Framework\TestCase;
+use RacingCar\TelemetrySystem\TelemetryDiagnosticControls;
 
 class TelemetrySystemTest extends TestCase
 {
