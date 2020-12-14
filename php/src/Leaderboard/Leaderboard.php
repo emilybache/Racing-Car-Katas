@@ -8,17 +8,12 @@ class Leaderboard
     /** @var Race[] */
     private $races;
 
-    /**
-     * Leaderboard constructor.
-     *
-     * @param Race[] $races
-     */
     public function __construct(array $races)
     {
         $this->races = $races;
     }
 
-    public function getDriverPoints()
+    public function getDriverResults()
     {
         $driverPoints = [];
         foreach ($this->races as $race) {
@@ -35,7 +30,7 @@ class Leaderboard
 
     public function getDriverRankings()
     {
-        $points = $this->getDriverPoints();
+        $points = $this->getDriverResults();
         arsort($points);
         return array_keys($points);
     }

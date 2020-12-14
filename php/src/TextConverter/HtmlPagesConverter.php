@@ -47,6 +47,6 @@ class HtmlPagesConverter
 
     public function getFileName()
     {
-        return $this->fullFileNameWithPath;
+        return $this->filename;
     }
 }

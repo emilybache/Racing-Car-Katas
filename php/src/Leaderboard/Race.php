@@ -6,6 +6,7 @@ namespace RacingCar\Leaderboard;
 class Race
 {
     private static $points = [25, 18, 15];
+
     private $name;
     private $drivers;
     private $driverNames;
@@ -23,7 +24,7 @@ class Race
         foreach ($drivers as $driver) {
             $name = $driver->name;
             if ($driver instanceof SelfDrivingCar) {
-                $name = "Self Driving Car - {$driver->country} ({$driver->algorithmVersion})";                
+                $name = "Self Driving Car - {$driver->country} ({$driver->algorithmVersion})";
             }
             $this->driverNames[(string)$driver] = $name;
         }
@@ -39,13 +40,14 @@ class Race
         return self::$points[$this->getPosition($driver)];
     }
 
+    public function getResults(): array
+    {
+        return $this->drivers;
+    }
+
     public function getDriverName(Driver $driver): string
     {
         return $this->driverNames[(string)$driver];
     }
 
-    public function getResults(): array
-    {
-        return $this->drivers;
-    }
 }
