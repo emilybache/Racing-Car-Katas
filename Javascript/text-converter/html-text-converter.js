@@ -17,8 +17,8 @@ HtmlTextConverter.prototype = {
 		};
 
 		var addANewLine = function() {
-			convertedLine = convertedLine.join('');
-			html.push(convertedLine);
+			var line = convertedLine.join('');
+			html.push(line);
 			convertedLine = [];
 		};
 
@@ -53,8 +53,7 @@ HtmlTextConverter.prototype = {
 		}
 
 		addANewLine();
-		html = html.join('<br />');
-		return html;
+		return html.join('<br />');
 	},
 
 	getFilename: function() {
