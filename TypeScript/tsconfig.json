@@ -19,6 +19,7 @@
     "forceConsistentCasingInFileNames": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
+    "skipLibCheck": true,
   },
   "include": [
     "tire-pressure-monitoring-system/*.ts",
