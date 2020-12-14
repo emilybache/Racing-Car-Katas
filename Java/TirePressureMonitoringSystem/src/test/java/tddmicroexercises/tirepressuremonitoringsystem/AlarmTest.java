@@ -1,14 +1,14 @@
 package tddmicroexercises.tirepressuremonitoringsystem;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 import org.junit.jupiter.api.Test;
 
-public class TestAlarm {
+public class AlarmTest {
 
     @Test
     public void foo() {
         Alarm alarm = new Alarm();
-        assertEquals(false, alarm.isAlarmOn());
+        assertFalse(alarm.isAlarmOn());
     }
 }
