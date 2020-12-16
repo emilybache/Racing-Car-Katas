@@ -17,7 +17,7 @@ class HtmlTextConverter
         $f = fopen($this->fullFileNameWithPath, 'r');
 
         $html = "";
-        while ($line = fgets($f) !== false)
+        while (($line = fgets($f)) !== false)
         {
             $line = rtrim($line);
             $html .= htmlspecialchars($line, ENT_QUOTES | ENT_HTML5);

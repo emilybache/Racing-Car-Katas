@@ -14,7 +14,7 @@ class HtmlPagesConverter
 
         $this->breaks = [0];
         $f = fopen($this->filename, 'r');
-        while ($line = fgets($f) !== false)
+        while (($line = fgets($f)) !== false)
         {
             $line = rtrim($line);
             if (strpos($line, 'PAGE_BREAK') !== false) {
