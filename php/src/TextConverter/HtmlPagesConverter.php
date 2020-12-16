@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace RacingCar\TextConverter;
@@ -6,6 +7,7 @@ namespace RacingCar\TextConverter;
 class HtmlPagesConverter
 {
     private $filename;
+
     private $breaks;
 
     public function __construct(string $filename)
@@ -14,8 +16,7 @@ class HtmlPagesConverter
 
         $this->breaks = [0];
         $f = fopen($this->filename, 'r');
-        while (($line = fgets($f)) !== false)
-        {
+        while (($line = fgets($f)) !== false) {
             $line = rtrim($line);
             if (strpos($line, 'PAGE_BREAK') !== false) {
                 $pageBreakPosition = ftell($f);
@@ -32,14 +33,14 @@ class HtmlPagesConverter
         $pageStart = $this->breaks[$page];
         $pageEnd = $this->breaks[$page + 1];
         fseek($f, $pageStart);
-        $html = "";
-        while (ftell($f) != $pageEnd) {
+        $html = '';
+        while (ftell($f) !== $pageEnd) {
             $line = rtrim(fgets($f));
             if (strpos($line, 'PAGE_BREAK') !== false) {
                 break;
             }
             $html .= htmlspecialchars($line, ENT_QUOTES | ENT_HTML5);
-            $html .= "<br />";
+            $html .= '<br />';
         }
         fclose($f);
         return $html;

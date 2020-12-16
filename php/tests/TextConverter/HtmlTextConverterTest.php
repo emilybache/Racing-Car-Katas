@@ -9,9 +9,9 @@ use RacingCar\TextConverter\HtmlTextConverter;
 
 class HtmlTextConverterTest extends TestCase
 {
-    public function testFoo()
+    public function testFoo(): void
     {
-        $converter = new HtmlTextConverter("foo");
-        $this->assertEquals("fixme", $converter->getFileName());
+        $converter = new HtmlTextConverter('foo');
+        $this->assertSame('fixme', $converter->getFileName());
     }
 }

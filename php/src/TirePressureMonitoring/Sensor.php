@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace RacingCar\TirePressureMonitoring;
@@ -20,6 +21,6 @@ class Sensor
     private static function getSamplePressure()
     {
         // placeholder implementation that simulate a real sensor in a real tire
-        return 6 * (mt_rand() / mt_getrandmax()) * (mt_rand() / mt_getrandmax());
+        return 6 * mt_rand() / mt_getrandmax() * mt_rand() / mt_getrandmax();
     }
 }

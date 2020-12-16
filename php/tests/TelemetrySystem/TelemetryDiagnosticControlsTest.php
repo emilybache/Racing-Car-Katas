@@ -9,8 +9,8 @@ use RacingCar\TelemetrySystem\TelemetryDiagnosticControls;
 
 class TelemetryDiagnosticControlsTest extends TestCase
 {
-    public function test_CheckTransmission_ShouldSendAndReceiveDiagnosticMessage() {
+    public function testCheckTransmissionShouldSendAndReceiveDiagnosticMessage(): void
+    {
         $this->markTestIncomplete();
     }
-
 }

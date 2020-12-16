@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace RacingCar\TelemetrySystem;
@@ -7,10 +8,11 @@ use Exception;
 
 class TelemetryDiagnosticControls
 {
-    public const DIAGNOSTIC_CHANNEL_CONNECTION_STRING = "*111#";
+    public const DIAGNOSTIC_CHANNEL_CONNECTION_STRING = '*111#';
+
+    public $diagnosticInfo = '';
 
     private $telemetryClient;
-    public $diagnosticInfo = "";
 
     public function __construct()
     {
@@ -20,21 +22,20 @@ class TelemetryDiagnosticControls
     /**
      * @throws Exception
      */
-    public function checkTransmission()
+    public function checkTransmission(): void
     {
-        $this->diagnosticInfo = "";
+        $this->diagnosticInfo = '';
 
         $this->telemetryClient->disconnect();
 
         $retryLeft = 3;
-        while($this->telemetryClient->getOnlineStatus() === false and $retryLeft > 0)
-        {
-            $this->telemetryClient->connect(TelemetryDiagnosticControls::DIAGNOSTIC_CHANNEL_CONNECTION_STRING);
-            $retryLeft -= 1;
+        while ($this->telemetryClient->getOnlineStatus() === false and $retryLeft > 0) {
+            $this->telemetryClient->connect(self::DIAGNOSTIC_CHANNEL_CONNECTION_STRING);
+            --$retryLeft;
         }
 
         if ($this->telemetryClient->getOnlineStatus() === false) {
-            throw new Exception("Unable to connect.");
+            throw new Exception('Unable to connect.');
         }
 
         $this->telemetryClient->send(TelemetryClient::DIAGNOSTIC_MESSAGE);

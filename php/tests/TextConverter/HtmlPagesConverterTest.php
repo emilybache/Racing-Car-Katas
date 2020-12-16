@@ -9,9 +9,9 @@ use RacingCar\TextConverter\HtmlPagesConverter;
 
 class HtmlPagesConverterTest extends TestCase
 {
-    public function testFoo()
+    public function testFoo(): void
     {
-        $converter = new HtmlPagesConverter("foo");
-        $this->assertEquals("fixme", $converter->getFileName());
+        $converter = new HtmlPagesConverter('foo');
+        $this->assertSame('fixme', $converter->getFileName());
     }
 }
