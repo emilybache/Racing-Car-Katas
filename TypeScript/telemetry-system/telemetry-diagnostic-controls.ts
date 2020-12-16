@@ -1,4 +1,4 @@
-import TelemetryClient from './telemetry-client.js';
+import TelemetryClient from './telemetry-client';
 
 export default class TelemetryDiagnosticControls {
 	private diagnosticChannelConnectionString: string;
