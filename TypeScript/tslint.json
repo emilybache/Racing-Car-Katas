@@ -5,8 +5,9 @@
     ],
     "jsRules": {},
     "rules": {
-        "quotemark": false,
-        "indent": false
+        "indent": false,
+        "no-implicit-dependencies": [true, "dev"],
+        "quotemark": false
     },
     "rulesDirectory": []
 }
