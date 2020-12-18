@@ -1,30 +1,28 @@
 <?php
+
 declare(strict_types=1);
 
 namespace RacingCar\Leaderboard;
 
 class Leaderboard
 {
-    /** @var Race[] */
+    /**
+     * @var Race[]
+     */
     private $races;
 
-    /**
-     * Leaderboard constructor.
-     *
-     * @param Race[] $races
-     */
     public function __construct(array $races)
     {
         $this->races = $races;
     }
 
-    public function getDriverPoints()
+    public function getDriverResults()
     {
         $driverPoints = [];
         foreach ($this->races as $race) {
             foreach ($race->getResults() as $driver) {
                 $name = $race->getDriverName($driver);
-                if (!isset($driverPoints[$name])) {
+                if (! isset($driverPoints[$name])) {
                     $driverPoints[$name] = 0;
                 }
                 $driverPoints[$name] += $race->getPoints($driver);
@@ -35,9 +33,8 @@ class Leaderboard
 
     public function getDriverRankings()
     {
-        $points = $this->getDriverPoints();
+        $points = $this->getDriverResults();
         arsort($points);
         return array_keys($points);
     }
 }
-

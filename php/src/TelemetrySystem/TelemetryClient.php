@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace RacingCar\TelemetrySystem;
@@ -8,20 +9,22 @@ use InvalidArgumentException;
 
 class TelemetryClient
 {
-    public const DIAGNOSTIC_MESSAGE = "AT#UD";
+    public const DIAGNOSTIC_MESSAGE = 'AT#UD';
+
     private $onlineStatus = false;
+
     private $diagnosticMessageJustSent = false;
 
     /**
-     * @param string $telemetryServerConnectionString
      * @throws Exception
      */
     public function connect(string $telemetryServerConnectionString): void
     {
-        if (empty($telemetryServerConnectionString))
+        if (empty($telemetryServerConnectionString)) {
             throw new InvalidArgumentException();
+        }
 
-        // Fake the connection with 80% changes of failure
+        // simulate the operation on a real modem
         $success = random_int(1, 10) <= 2;
 
         $this->onlineStatus = $success;
@@ -33,13 +36,13 @@ class TelemetryClient
     }
 
     /**
-     * @param string $message
      * @throws Exception
      */
     public function send(string $message): void
     {
-        if (empty($message))
+        if (empty($message)) {
             throw new InvalidArgumentException();
+        }
 
         // The simulation of send() actually just remember
         // if the last message sent was a diagnostic
@@ -47,20 +50,22 @@ class TelemetryClient
         // This information will be used to simulate the
         // receive(). Indeed there is no real server
         // listening.
-        if ($message === self::DIAGNOSTIC_MESSAGE)
+        if ($message === self::DIAGNOSTIC_MESSAGE) {
             $this->diagnosticMessageJustSent = true;
-        else
-            $this->diagnosticMessageJustSent = false;
+            return;
+        }
+
+        $this->diagnosticMessageJustSent = false;
+        // here should go the real Send operation (not needed for this exercise)
     }
 
     /**
-     * @return string
      * @throws Exception
      */
     public function receive(): string
     {
         if ($this->diagnosticMessageJustSent) {
-            # Simulate the reception of the diagnostic message
+            // simulate a status report
             $message =
 "LAST TX rate................ 100 MBPS\r\n
 HIGHEST TX rate............. 100 MBPS\r\n
@@ -78,8 +83,8 @@ Local Rtrn Count............ 00\r\n
 Remote Rtrn Count........... 00";
             $this->diagnosticMessageJustSent = false;
         } else {
-            #  Simulate the reception of a response message returning a random message.
-            $message = "";
+            // simulate a received message (just for illustration - not needed for this exercise)
+            $message = '';
             $messageLength = random_int(0, 50) + 60;
             $i = $messageLength;
             for ($i = $messageLength; $i >= 0; $i--) {

@@ -1,0 +1,38 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    // see https://www.typescriptlang.org/docs/handbook/compiler-options.html
+    "target": "es5",
+    "lib": [
+      "esnext"
+    ],
+    // "module": "commonjs":
+    "sourceMap": true,
+    "outDir": "./dist/",
+    "noEmitOnError": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    //"noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "forceConsistentCasingInFileNames": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+  },
+  "include": [
+    "tire-pressure-monitoring-system/*.ts",
+    "tire-pressure-monitoring-system-tests/*.ts",
+    "text-converter/*.ts",
+    "text-converter-tests/*.ts",
+    "turn-ticket-dispenser/*.ts",
+    "turn-ticket-dispenser-tests/*.ts",
+    "telemetry-system/*.ts",
+    "telemetry-system-tests/*.ts",
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+  ]
+}

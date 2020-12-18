@@ -1,6 +1,17 @@
-/.idea 
-/report.xml 
-/.phpstorm.meta.php 
+# PHP Storm
+/.idea
+*.iml
+
+composer.phar
+/report.xml
+/.phpstorm.meta.php
 /.phpunit.result.cache
 /build
 /vendor
+
+# Eclipse files
+.settings
+.buildpath
+.project
+
+.vscode/

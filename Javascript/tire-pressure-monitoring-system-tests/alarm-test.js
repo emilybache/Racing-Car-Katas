@@ -1,12 +1,16 @@
-describe('Tyre Pressure Monitoring System', function () {
+/* globals describe, it */
+var chai = require('chai');
+chai.should();
 
-	describe('Alarm', function () {
+var Alarm = require('../tire-pressure-monitoring-system/alarm.js');
 
-		it('Do something', function () {
+describe('Tyre Pressure Monitoring System', function() {
 
-			var target = new Alarm();
-			target.check();
-			
+	describe('Alarm', function() {
+
+		it('foo', function() {
+			var alarm = new Alarm();
+			alarm.alarmOn().should.equal(false);
 		});
 
 	});

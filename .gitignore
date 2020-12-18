@@ -32,7 +32,3 @@ xcuserdata/
 *.moved-aside
 *.xccheckout
 *.xcscmblueprint
-
-# Php
-php/vendor/
-.phpunit.result.cache

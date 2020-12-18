@@ -1,14 +1,14 @@
-describe('Telemetry System', function () {
+/* globals describe, it */
+var chai = require('chai');
+chai.should();
 
-	describe('TelemetryDiagnosticControls', function () {
+var TelemetryDiagnosticControls = require('../telemetry-system/telemetry-diagnostic-controls.js');
 
-		it('CheckTransmission() should send a diagnostic message and receive a status message response', function () {
+describe('Telemetry System', function() {
 
-			var target = new TelemetryDiagnosticControls();
-			target.checkTransmission();
+	describe('TelemetryDiagnosticControls', function() {
 
-			var result = target.readDiagnosticInfo();
-
+		it('CheckTransmission should send a diagnostic message and receive a status message response', function() {
 		});
 
 	});

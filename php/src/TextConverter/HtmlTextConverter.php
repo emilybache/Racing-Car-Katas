@@ -1,9 +1,10 @@
 <?php
+
 declare(strict_types=1);
 
 namespace RacingCar\TextConverter;
 
-class UnicodeFileToHtmlTextConverter
+class HtmlTextConverter
 {
     private $fullFileNameWithPath;
 
@@ -15,14 +16,13 @@ class UnicodeFileToHtmlTextConverter
     public function convertToHtml(): string
     {
         $f = fopen($this->fullFileNameWithPath, 'r');
-        $html = "";
-        while ($line = fgets($f) !== false)
-        {
+
+        $html = '';
+        while (($line = fgets($f)) !== false) {
             $line = rtrim($line);
             $html .= htmlspecialchars($line, ENT_QUOTES | ENT_HTML5);
-            $html .= "<br />";
+            $html .= '<br />';
         }
-        fclose($f);
         return $html;
     }
 

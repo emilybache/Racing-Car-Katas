@@ -1,11 +1,17 @@
-describe('Turn Ticket Dispenser', function () {
+/* globals describe, it */
+var chai = require('chai');
+chai.should();
 
-	describe('TurnTicketDispenser', function () {
+var TicketDispenser = require('../turn-ticket-dispenser/ticket-dispenser.js');
 
-		it('Do something', function () {
+describe('Turn Ticket Dispenser', function() {
 
-			var target = new TicketDispenser();
+	describe('TurnTicketDispenser', function() {
 
+		it('foo', function() {
+			var dispenser = new TicketDispenser();
+			var ticket = dispenser.getTurnTicket();
+			ticket.turnNumber().should.equal(-1);
 		});
 
 	});
