@@ -1,8 +1,9 @@
 cmake_minimum_required(VERSION 3.5.1)
 project(Racing-Car-GMock)
-list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/../cmake")
-enable_testing()
 
+list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake")
+
+enable_testing()
 include(ExternalProject)
 
 message("No system gtest use external project")
