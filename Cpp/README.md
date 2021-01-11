@@ -1,5 +1,12 @@
-C++ Version
-===========
+C++-14 Version
+==============
+
+The test stubs have support for two different test frameworks
+catch2 and google test and can optionally link with ApprovalTests
+as well. 
+
+
+
 
 CMake Build
 -----------
@@ -8,17 +15,36 @@ CMake Build
 
 * CMake: Although not tested on 3.14 it shouldn't (knowingly) use anything
   that not works on this version, the lowest tested version is 3.17.
+  Note: CLion have a bundled cmake it works with.
 * C++ compiler supporting C++-14 recognized by CMake > 3.5:ish
 
+
+
+### Options
+
+There are three options to control what version to build, default all
+are on.
+
+- USE_CATCH2: Add Catch2 based tests
+- USE_GOOGLE_TEST: Add Google Test based tests
+- USE_APPROVAL_TESTS: Add Google Test based tests
+
+
 ### Quick start
+
+Open project in CLion, you can set up build versions with different build flags
+in preferences, Build, Execution, Deployment> Cmake add options to CMake Options
+souch as: "-DUSE_GOOGLE_TEST=OFF -DUSE_CATCH2=ON -DUSE_APPROVAL_TESTS=ON"
+
+or run from command line: 
 
 ```sh
 ./run-once-cmake.sh
 ```
 
-### Tested on
+### Tested with
 
- * macOS Big Sur - Cmake 3.17
+ * macOS Big Sur - Cmake 3.17 - CLion 2020.3
 
 
 ### Random notes
@@ -41,7 +67,7 @@ Meson Build
 
 * meson: pip install meson
 * ninja: Build tool
-* C++-11 compiler: Tested with clang 7.0, g++ 8.2
+* C++-14 compiler: Tested with clang 7.0, g++ 8.2
 * gcovr: for html coverage reports
 
 ### Quick start
@@ -53,6 +79,6 @@ Meson Build
 Coverage report in build\_meson/meson-logs/coveragereport/index.html
 
 
-### Tested on
+### Tested with
 
- * Ununtu 18.10 - meson 0.49.2
+ * macOS Big Sur - meson 0.50.0
