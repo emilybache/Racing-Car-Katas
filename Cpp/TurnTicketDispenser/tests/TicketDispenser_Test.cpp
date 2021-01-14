@@ -2,6 +2,6 @@
 #include "TicketDispenser.h"
 
 namespace {
-  TEST(TicketDispenser, TDB) {
+  TEST(TicketDispenser, TBD) {
   }
 }

@@ -1,8 +1,8 @@
 #!/bin/bash
 
-if [[ ! -d build ]]; then
-    mkdir -p build
+if [[ ! -d cmake-build-script ]]; then
+    mkdir -p cmake-build-script
 fi
 
-cd build
-cmake .. -DCMAKE_BUILD_TYPE=DEBUG && cmake --build . && cmake --build . --target test_coverage
+cd cmake-build-script
+cmake .. -DCMAKE_BUILD_TYPE=DEBUG && cmake --build . && cmake --build . --target test

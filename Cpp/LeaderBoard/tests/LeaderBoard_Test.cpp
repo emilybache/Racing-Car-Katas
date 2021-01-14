@@ -2,7 +2,7 @@
 #include "LeaderBoard.h"
 
 namespace {
-  TEST(LeaderBoard, TDB) {
+  TEST(LeaderBoard, TBD) {
   }
 }
 

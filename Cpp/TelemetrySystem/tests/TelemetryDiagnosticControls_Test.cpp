@@ -2,7 +2,7 @@
 #include "TelemetryDiagnosticControls.h"
 
 namespace {
-  TEST(TelemetrySystem, TDB) {
+  TEST(TelemetrySystem, TBD) {
   }
 }
 

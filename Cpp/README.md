@@ -1,35 +1,58 @@
-C++ Version
-===========
+C++-14 Version
+==============
+
+The test stubs have support for two different test frameworks
+catch2 and google test and can optionally link with ApprovalTests
+as well. 
+
+
+
 
 CMake Build
 -----------
 
 ### Needed tools
 
-* CMake: Althou not tested on 3.5 it shouldn't (knowinly) use anyhting
-  thet not works on this version, lowet tested version is 3.10.
-* C++ compiler supporting C++-14 reconized by CMake > 3.5:ish
-* gcovr - to collect coverage from tests
+* CMake: Although not tested on 3.14 it shouldn't (knowingly) use anything
+  that not works on this version, the lowest tested version is 3.17.
+  Note: CLion have a bundled cmake it works with.
+* C++ compiler supporting C++-14 recognized by CMake > 3.5:ish
+
+
+
+### Options
+
+There are three options to control what version to build, default all
+are on.
+
+- USE_CATCH2: Add Catch2 based tests
+- USE_GOOGLE_TEST: Add Google Test based tests
+- USE_APPROVAL_TESTS: Add Google Test based tests
+
 
 ### Quick start
+
+Open project in CLion, you can set up build versions with different build flags
+in preferences, Build, Execution, Deployment> Cmake add options to CMake Options
+souch as: "-DUSE_GOOGLE_TEST=OFF -DUSE_CATCH2=ON -DUSE_APPROVAL_TESTS=ON"
+
+or run from command line: 
 
 ```sh
 ./run-once-cmake.sh
 ```
 
-Coverage report in build/test\_coverage/index.html
+### Tested with
 
-### Tested on
-
- * Ununtu 18.04 - CMake 3.10
- * macOS Mojave - Cmake 3.12
+ * macOS Big Sur - Cmake 3.17 - CLion 2020.3
 
 
 ### Random notes
 
 Will download and use googletest (including googlemock)
+Will download and possible use approval test
 
-bash-script for convinience build and test
+bash-script for convenience build and test
 
 
 ### Nice things to solve in future
@@ -44,7 +67,7 @@ Meson Build
 
 * meson: pip install meson
 * ninja: Build tool
-* C++-11 compiler: Tested with clang 7.0, g++ 8.2
+* C++-14 compiler: Tested with clang 7.0, g++ 8.2
 * gcovr: for html coverage reports
 
 ### Quick start
@@ -56,6 +79,6 @@ Meson Build
 Coverage report in build\_meson/meson-logs/coveragereport/index.html
 
 
-### Tested on
+### Tested with
 
- * Ununtu 18.10 - meson 0.49.2
+ * macOS Big Sur - meson 0.50.0
