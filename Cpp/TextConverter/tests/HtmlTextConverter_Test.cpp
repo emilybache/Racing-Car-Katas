@@ -2,7 +2,10 @@
 #include "HtmlTextConverter.h"
 
 namespace {
-  TEST(HtmlTextConverter, TBD) {
-  }
+  TEST(Alarm, Foo) {
+        auto converter = new HtmlTextConverter("foo");
+        ASSERT_EQ("fixme", converter->getFilename());
+
+    }
 }
 
