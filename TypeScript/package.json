@@ -17,6 +17,8 @@
   "scripts": {
     "build": "tsc",
     "test": "mocha --require ts-node/register tire-pressure-monitoring-system-tests/*-test.ts text-converter-tests/*-test.ts turn-ticket-dispenser-tests/*-test.ts telemetry-system-tests/*-test.ts",
+    "test-alarm": "mocha --require ts-node/register tire-pressure-monitoring-system-tests/*-test.ts",
+    "test-text": "mocha --require ts-node/register text-converter-tests/*-test.ts",
     "lint": "tslint --project ."
   }
 }

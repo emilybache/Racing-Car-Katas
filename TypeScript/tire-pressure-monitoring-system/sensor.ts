@@ -1,7 +1,9 @@
 // The reading of the pressure value from the sensor is simulated in this implementation.
 // Because the focus of the exercise is on the other class.
 
-export default class Sensor {
+import SensorInterface from "./sensor-interface";
+
+export default class Sensor implements SensorInterface{
 
 	public popNextPressurePsiValue() {
 		const pressureTelemetryValue = this.samplePressure();
