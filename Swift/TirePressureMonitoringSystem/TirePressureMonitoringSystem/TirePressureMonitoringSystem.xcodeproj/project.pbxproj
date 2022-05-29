@@ -7,21 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		244CB6411F0401A8001EA260 /* TestAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244CB6401F0401A8001EA260 /* TestAlarm.swift */; };
-		244CB64D1F04029A001EA260 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244CB64C1F04029A001EA260 /* Alarm.swift */; };
-		244CB64F1F0402A5001EA260 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244CB64E1F0402A5001EA260 /* Sensor.swift */; };
+		3284DA912843BC9C00FAFB67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284DA902843BC9C00FAFB67 /* AppDelegate.swift */; };
+		3284DA932843BC9C00FAFB67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284DA922843BC9C00FAFB67 /* ViewController.swift */; };
+		3284DA952843BC9E00FAFB67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3284DA942843BC9E00FAFB67 /* Assets.xcassets */; };
+		3284DA982843BC9F00FAFB67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3284DA962843BC9F00FAFB67 /* Main.storyboard */; };
+		3284DAA32843BC9F00FAFB67 /* TirePressureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284DAA22843BC9F00FAFB67 /* TirePressureTests.swift */; };
+		3284DAB92843BCB500FAFB67 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244CB64C1F04029A001EA260 /* Alarm.swift */; };
+		3284DABA2843BCB800FAFB67 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244CB64E1F0402A5001EA260 /* Sensor.swift */; };
+		3284DABB2843BCBB00FAFB67 /* TestAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244CB6401F0401A8001EA260 /* TestAlarm.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3284DA9F2843BC9F00FAFB67 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 244CB6201F0401A8001EA260 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3284DA8D2843BC9C00FAFB67;
+			remoteInfo = TirePressure;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		244CB63C1F0401A8001EA260 /* TirePressureMonitoringSystemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TirePressureMonitoringSystemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		244CB6401F0401A8001EA260 /* TestAlarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAlarm.swift; sourceTree = "<group>"; };
 		244CB6421F0401A8001EA260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		244CB64C1F04029A001EA260 /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		244CB64E1F0402A5001EA260 /* Sensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
+		3284DA8E2843BC9C00FAFB67 /* TirePressure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TirePressure.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3284DA902843BC9C00FAFB67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3284DA922843BC9C00FAFB67 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3284DA942843BC9E00FAFB67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3284DA972843BC9F00FAFB67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3284DA992843BC9F00FAFB67 /* TirePressure.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TirePressure.entitlements; sourceTree = "<group>"; };
+		3284DA9E2843BC9F00FAFB67 /* TirePressureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TirePressureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3284DAA22843BC9F00FAFB67 /* TirePressureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TirePressureTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		244CB6391F0401A8001EA260 /* Frameworks */ = {
+		3284DA8B2843BC9C00FAFB67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3284DA9B2843BC9F00FAFB67 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,6 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				244CB63F1F0401A8001EA260 /* TirePressureMonitoringSystemTests */,
+				3284DA8F2843BC9C00FAFB67 /* TirePressure */,
+				3284DAA12843BC9F00FAFB67 /* TirePressureTests */,
 				244CB6291F0401A8001EA260 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -42,7 +73,8 @@
 		244CB6291F0401A8001EA260 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				244CB63C1F0401A8001EA260 /* TirePressureMonitoringSystemTests.xctest */,
+				3284DA8E2843BC9C00FAFB67 /* TirePressure.app */,
+				3284DA9E2843BC9F00FAFB67 /* TirePressureTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,24 +98,62 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		3284DA8F2843BC9C00FAFB67 /* TirePressure */ = {
+			isa = PBXGroup;
+			children = (
+				3284DA902843BC9C00FAFB67 /* AppDelegate.swift */,
+				3284DA922843BC9C00FAFB67 /* ViewController.swift */,
+				3284DA942843BC9E00FAFB67 /* Assets.xcassets */,
+				3284DA962843BC9F00FAFB67 /* Main.storyboard */,
+				3284DA992843BC9F00FAFB67 /* TirePressure.entitlements */,
+			);
+			path = TirePressure;
+			sourceTree = "<group>";
+		};
+		3284DAA12843BC9F00FAFB67 /* TirePressureTests */ = {
+			isa = PBXGroup;
+			children = (
+				3284DAA22843BC9F00FAFB67 /* TirePressureTests.swift */,
+			);
+			path = TirePressureTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		244CB63B1F0401A8001EA260 /* TirePressureMonitoringSystemTests */ = {
+		3284DA8D2843BC9C00FAFB67 /* TirePressure */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 244CB6481F0401A8001EA260 /* Build configuration list for PBXNativeTarget "TirePressureMonitoringSystemTests" */;
+			buildConfigurationList = 3284DAB62843BC9F00FAFB67 /* Build configuration list for PBXNativeTarget "TirePressure" */;
 			buildPhases = (
-				244CB6381F0401A8001EA260 /* Sources */,
-				244CB6391F0401A8001EA260 /* Frameworks */,
-				244CB63A1F0401A8001EA260 /* Resources */,
+				3284DA8A2843BC9C00FAFB67 /* Sources */,
+				3284DA8B2843BC9C00FAFB67 /* Frameworks */,
+				3284DA8C2843BC9C00FAFB67 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = TirePressureMonitoringSystemTests;
-			productName = TirePressureMonitoringSystemTests;
-			productReference = 244CB63C1F0401A8001EA260 /* TirePressureMonitoringSystemTests.xctest */;
+			name = TirePressure;
+			productName = TirePressure;
+			productReference = 3284DA8E2843BC9C00FAFB67 /* TirePressure.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3284DA9D2843BC9F00FAFB67 /* TirePressureTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3284DAB72843BC9F00FAFB67 /* Build configuration list for PBXNativeTarget "TirePressureTests" */;
+			buildPhases = (
+				3284DA9A2843BC9F00FAFB67 /* Sources */,
+				3284DA9B2843BC9F00FAFB67 /* Frameworks */,
+				3284DA9C2843BC9F00FAFB67 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3284DAA02843BC9F00FAFB67 /* PBXTargetDependency */,
+			);
+			name = TirePressureTests;
+			productName = TirePressureTests;
+			productReference = 3284DA9E2843BC9F00FAFB67 /* TirePressureTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -92,15 +162,20 @@
 		244CB6201F0401A8001EA260 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = example;
 				TargetAttributes = {
-					244CB63B1F0401A8001EA260 = {
-						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 4C34FT6ABU;
-						LastSwiftMigration = 0940;
+					3284DA8D2843BC9C00FAFB67 = {
+						CreatedOnToolsVersion = 13.2.1;
+						DevelopmentTeam = 4F8LZQ594D;
 						ProvisioningStyle = Automatic;
+					};
+					3284DA9D2843BC9F00FAFB67 = {
+						CreatedOnToolsVersion = 13.2.1;
+						DevelopmentTeam = 4F8LZQ594D;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3284DA8D2843BC9C00FAFB67;
 					};
 				};
 			};
@@ -109,6 +184,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -117,13 +193,23 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				244CB63B1F0401A8001EA260 /* TirePressureMonitoringSystemTests */,
+				3284DA8D2843BC9C00FAFB67 /* TirePressure */,
+				3284DA9D2843BC9F00FAFB67 /* TirePressureTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		244CB63A1F0401A8001EA260 /* Resources */ = {
+		3284DA8C2843BC9C00FAFB67 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3284DA952843BC9E00FAFB67 /* Assets.xcassets in Resources */,
+				3284DA982843BC9F00FAFB67 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3284DA9C2843BC9F00FAFB67 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -133,17 +219,46 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		244CB6381F0401A8001EA260 /* Sources */ = {
+		3284DA8A2843BC9C00FAFB67 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				244CB6411F0401A8001EA260 /* TestAlarm.swift in Sources */,
-				244CB64F1F0402A5001EA260 /* Sensor.swift in Sources */,
-				244CB64D1F04029A001EA260 /* Alarm.swift in Sources */,
+				3284DA932843BC9C00FAFB67 /* ViewController.swift in Sources */,
+				3284DABB2843BCBB00FAFB67 /* TestAlarm.swift in Sources */,
+				3284DABA2843BCB800FAFB67 /* Sensor.swift in Sources */,
+				3284DA912843BC9C00FAFB67 /* AppDelegate.swift in Sources */,
+				3284DAB92843BCB500FAFB67 /* Alarm.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3284DA9A2843BC9F00FAFB67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3284DAA32843BC9F00FAFB67 /* TirePressureTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3284DAA02843BC9F00FAFB67 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3284DA8D2843BC9C00FAFB67 /* TirePressure */;
+			targetProxy = 3284DA9F2843BC9F00FAFB67 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3284DA962843BC9F00FAFB67 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3284DA972843BC9F00FAFB67 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		244CB6431F0401A8001EA260 /* Debug */ = {
@@ -257,31 +372,121 @@
 			};
 			name = Release;
 		};
-		244CB6491F0401A8001EA260 /* Debug */ = {
+		3284DAB02843BC9F00FAFB67 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 4C34FT6ABU;
-				INFOPLIST_FILE = TirePressureMonitoringSystemTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.TirePressureMonitoringSystemTests;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = TirePressure/TirePressure.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4F8LZQ594D;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 example. All rights reserved.";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ludotronics.TirePressure;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		244CB64A1F0401A8001EA260 /* Release */ = {
+		3284DAB12843BC9F00FAFB67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = TirePressure/TirePressure.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4F8LZQ594D;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 example. All rights reserved.";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ludotronics.TirePressure;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		3284DAB22843BC9F00FAFB67 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 4C34FT6ABU;
-				INFOPLIST_FILE = TirePressureMonitoringSystemTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.TirePressureMonitoringSystemTests;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4F8LZQ594D;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ludotronics.TirePressureTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TirePressure.app/Contents/MacOS/TirePressure";
+			};
+			name = Debug;
+		};
+		3284DAB32843BC9F00FAFB67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4F8LZQ594D;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ludotronics.TirePressureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TirePressure.app/Contents/MacOS/TirePressure";
 			};
 			name = Release;
 		};
@@ -297,11 +502,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		244CB6481F0401A8001EA260 /* Build configuration list for PBXNativeTarget "TirePressureMonitoringSystemTests" */ = {
+		3284DAB62843BC9F00FAFB67 /* Build configuration list for PBXNativeTarget "TirePressure" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				244CB6491F0401A8001EA260 /* Debug */,
-				244CB64A1F0401A8001EA260 /* Release */,
+				3284DAB02843BC9F00FAFB67 /* Debug */,
+				3284DAB12843BC9F00FAFB67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3284DAB72843BC9F00FAFB67 /* Build configuration list for PBXNativeTarget "TirePressureTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3284DAB22843BC9F00FAFB67 /* Debug */,
+				3284DAB32843BC9F00FAFB67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
