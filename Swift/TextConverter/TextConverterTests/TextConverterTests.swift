@@ -9,6 +9,9 @@ import XCTest
 @testable import TextConverter
 
 class TextConverterTests: XCTestCase {
-
+    func testFoo() {
+        let converter = HtmlTextConverter(fullFilenameWithPath: "foo")
+        XCTAssertEqual("fixme", converter.fullFilenameWithPath)
+    }
 }
 
