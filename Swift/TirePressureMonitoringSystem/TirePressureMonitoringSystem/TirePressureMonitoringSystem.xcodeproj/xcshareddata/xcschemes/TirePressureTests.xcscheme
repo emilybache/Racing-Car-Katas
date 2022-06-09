@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0940"
+   LastUpgradeVersion = "1320"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -16,15 +16,13 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "244CB63B1F0401A8001EA260"
-               BuildableName = "TirePressureMonitoringSystemTests.xctest"
-               BlueprintName = "TirePressureMonitoringSystemTests"
+               BlueprintIdentifier = "3284DA9D2843BC9F00FAFB67"
+               BuildableName = "TirePressureTests.xctest"
+               BlueprintName = "TirePressureTests"
                ReferencedContainer = "container:TirePressureMonitoringSystem.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -36,8 +34,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <AdditionalOptions>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
