@@ -14,7 +14,6 @@
 		3284DAA32843BC9F00FAFB67 /* TirePressureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3284DAA22843BC9F00FAFB67 /* TirePressureTests.swift */; };
 		3284DAB92843BCB500FAFB67 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244CB64C1F04029A001EA260 /* Alarm.swift */; };
 		3284DABA2843BCB800FAFB67 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244CB64E1F0402A5001EA260 /* Sensor.swift */; };
-		3284DABB2843BCBB00FAFB67 /* TestAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244CB6401F0401A8001EA260 /* TestAlarm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +27,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		244CB6401F0401A8001EA260 /* TestAlarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAlarm.swift; sourceTree = "<group>"; };
 		244CB6421F0401A8001EA260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		244CB64C1F04029A001EA260 /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		244CB64E1F0402A5001EA260 /* Sensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
@@ -84,7 +82,6 @@
 			children = (
 				244CB64C1F04029A001EA260 /* Alarm.swift */,
 				244CB64E1F0402A5001EA260 /* Sensor.swift */,
-				244CB6401F0401A8001EA260 /* TestAlarm.swift */,
 				244CB64B1F040236001EA260 /* Supporting Files */,
 			);
 			path = TirePressureMonitoringSystemTests;
@@ -224,7 +221,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3284DA932843BC9C00FAFB67 /* ViewController.swift in Sources */,
-				3284DABB2843BCBB00FAFB67 /* TestAlarm.swift in Sources */,
 				3284DABA2843BCB800FAFB67 /* Sensor.swift in Sources */,
 				3284DA912843BC9C00FAFB67 /* AppDelegate.swift in Sources */,
 				3284DAB92843BCB500FAFB67 /* Alarm.swift in Sources */,
