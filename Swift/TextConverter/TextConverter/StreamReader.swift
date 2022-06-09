@@ -33,6 +33,10 @@ class StreamReader  {
         self.close()
     }
 
+    func skip(_ offset: UInt64) throws {
+        try fileHandle.seek(toOffset: offset)
+    }
+
     /// Return next line, or nil on EOF.
     func nextLine() -> String? {
         precondition(fileHandle != nil, "Attempt to read from closed file")

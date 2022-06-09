@@ -10,6 +10,5 @@ import XCTest
 
 class TextConverterTests: XCTestCase {
 
-
 }
 

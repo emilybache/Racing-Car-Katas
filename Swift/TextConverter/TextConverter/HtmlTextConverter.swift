@@ -17,9 +17,7 @@ class HtmlTextConverter {
     func convertToHtml() throws -> String {
 
         guard let reader = StreamReader(path: fullFilenameWithPath) else { throw NSError(domain: "", code: 0, userInfo: [:]) }
-        defer {
-            reader.close()
-        }
+        defer { reader.close() }
 
         var line = reader.nextLine();
         var html = "";
