@@ -14,9 +14,9 @@ class Alarm
 
     private $isAlarmOn = false;
 
-    public function __construct()
+    public function __construct(Sensor $sensor)
     {
-        $this->sensor = new Sensor();
+        $this->sensor = $sensor;
     }
 
     public function check(): void

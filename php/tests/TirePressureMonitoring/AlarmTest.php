@@ -6,12 +6,16 @@ namespace Tests\TirePressureMonitoring;
 
 use PHPUnit\Framework\TestCase;
 use RacingCar\TirePressureMonitoring\Alarm;
+use RacingCar\TirePressureMonitoring\RealSensor;
 
 class AlarmTest extends TestCase
 {
     public function testChecksIfAlarmIsOnWithoutCheck(): void
     {
-        $alarm = new Alarm();
+        //Given
+        $alarm = new Alarm(new RealSensor());
+
+        //Then
         $this->assertFalse($alarm->isAlarmOn());
     }
 
@@ -19,7 +23,7 @@ class AlarmTest extends TestCase
     {
         self::markTestSkipped('false positive');
         //Given
-        $alarm = new Alarm();
+        $alarm = new Alarm(new RealSensor());
 
         //When
         $alarm->check();
