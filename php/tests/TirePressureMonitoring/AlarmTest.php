@@ -21,9 +21,11 @@ class AlarmTest extends TestCase
 
     public function testChecksIfAlarmTurnsOnWhenLowPressure(): void
     {
-        self::markTestSkipped('false positive');
         //Given
-        $alarm = new Alarm(new RealSensor());
+        $fixedSensor = new FixedSensor();
+        $fixedSensor->setPressurePsiValue(18.0);
+
+        $alarm = new Alarm($fixedSensor);
 
         //When
         $alarm->check();
