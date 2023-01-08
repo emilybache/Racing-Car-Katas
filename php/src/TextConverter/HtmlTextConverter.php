@@ -6,11 +6,9 @@ namespace RacingCar\TextConverter;
 
 class HtmlTextConverter
 {
-    private $fullFileNameWithPath;
-
-    public function __construct(string $fullFileNameWithPath)
-    {
-        $this->fullFileNameWithPath = $fullFileNameWithPath;
+    public function __construct(
+        private string $fullFileNameWithPath
+    ) {
     }
 
     public function convertToHtml(): string
@@ -26,7 +24,7 @@ class HtmlTextConverter
         return $html;
     }
 
-    public function getFileName()
+    public function getFileName(): string
     {
         return $this->fullFileNameWithPath;
     }

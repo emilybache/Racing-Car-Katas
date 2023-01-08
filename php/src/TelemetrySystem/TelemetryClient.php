@@ -11,9 +11,9 @@ class TelemetryClient
 {
     public const DIAGNOSTIC_MESSAGE = 'AT#UD';
 
-    private $onlineStatus = false;
+    private bool $onlineStatus = false;
 
-    private $diagnosticMessageJustSent = false;
+    private bool $diagnosticMessageJustSent = false;
 
     /**
      * @throws Exception
@@ -95,7 +95,7 @@ Remote Rtrn Count........... 00";
         return $message;
     }
 
-    public function getOnlineStatus()
+    public function getOnlineStatus(): bool
     {
         return $this->onlineStatus;
     }

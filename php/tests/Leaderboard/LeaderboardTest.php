@@ -12,29 +12,29 @@ use RacingCar\Leaderboard\SelfDrivingCar;
 
 class LeaderboardTest extends TestCase
 {
-    private $driver1;
+    private Driver $driver1;
 
-    private $driver2;
+    private Driver $driver2;
 
-    private $driver3;
+    private Driver $driver3;
 
-    private $driver4;
+    private SelfDrivingCar $driver4;
 
-    private $race1;
+    private Race $race1;
 
-    private $race2;
+    private Race $race2;
 
-    private $race3;
+    private Race $race3;
 
-    private $race4;
+    private Race $race4;
 
-    private $race5;
+    private Race $race5;
 
-    private $race6;
+    private Race $race6;
 
-    private $sampleLeaderboard1;
+    private Leaderboard $sampleLeaderboard1;
 
-    private $sampleLeaderboard2;
+    private Leaderboard $sampleLeaderboard2;
 
     protected function setUp(): void
     {

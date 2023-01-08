@@ -6,14 +6,15 @@ This is the PHP version of the Racing Car Katas.
 
 The project uses:
 
-- [PHP 7.3 or 7.4 or 8.0+](https://www.php.net/downloads.php)
+- [PHP 8.0+](https://www.php.net/downloads.php)
 - [Composer](https://getcomposer.org)
 
 Recommended:
 
 - [Git](https://git-scm.com/downloads)
 
-Clone the repository
+See [GitHub cloning a repository](https://help.github.com/en/articles/cloning-a-repository) for details on how to
+create a local copy of this project on your computer.
 
 ```sh
 git clone git@github.com:emilybache/Racing-Car-Katas.git
@@ -35,9 +36,8 @@ composer install
 Run all the tests
 
 ```shell script
-composer test
+composer tests
 ```
-
 
 ## Dependencies
 
@@ -63,14 +63,14 @@ PHPUnit is used to run tests, to help this can be run using a composer script. T
 the project run:
 
 ```shell script
-composer test
+composer tests
 ```
 
-On Windows a batch file has been created, similar to an alias on Linux/Mac (e.g. `alias pu="composer test"`), the same
-`composer test` can be run:
+On Windows a batch file has been created, similar to an alias on Linux/Mac (e.g. `alias pu="composer tests"`), the same
+`composer tests` can be run:
 
 ```shell script
-pu
+pu.bat
 ```
 
 ### Tests with Coverage Report
@@ -101,7 +101,7 @@ On Windows a batch file has been created, similar to an alias on Linux/Mac (e.g.
 same `composer check-cs` can be run:
 
 ```shell script
-cc
+cc.bat
 ```
 
 ### Fix Code
@@ -116,7 +116,7 @@ On Windows a batch file has been created, similar to an alias on Linux/Mac (e.g.
 `composer fix-cs` can be run:
 
 ```shell script
-fc
+fc.bat
 ```
 
 ## Static Analysis
@@ -131,7 +131,7 @@ On Windows a batch file has been created, similar to an alias on Linux/Mac (e.g.
 same `composer phpstan` can be run:
 
 ```shell script
-ps
+ps.bat
 ```
 
 **Happy coding**!

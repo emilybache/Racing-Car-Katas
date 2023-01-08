@@ -6,14 +6,12 @@ namespace RacingCar\TurnTicketDispenser;
 
 class TurnTicket
 {
-    private $turnNumber;
-
-    public function __construct(int $turnNumber)
-    {
-        $this->turnNumber = $turnNumber;
+    public function __construct(
+        private int $turnNumber
+    ) {
     }
 
-    public function getTurnNumber()
+    public function getTurnNumber(): int
     {
         return $this->turnNumber;
     }

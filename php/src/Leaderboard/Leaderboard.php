@@ -7,16 +7,17 @@ namespace RacingCar\Leaderboard;
 class Leaderboard
 {
     /**
-     * @var Race[]
+     * @param Race[] $races
      */
-    private $races;
-
-    public function __construct(array $races)
-    {
-        $this->races = $races;
+    public function __construct(
+        private array $races
+    ) {
     }
 
-    public function getDriverResults()
+    /**
+     * @return array<string, int>
+     */
+    public function getDriverResults(): array
     {
         $driverPoints = [];
         foreach ($this->races as $race) {
@@ -31,7 +32,10 @@ class Leaderboard
         return $driverPoints;
     }
 
-    public function getDriverRankings()
+    /**
+     * @return int[]|string[]
+     */
+    public function getDriverRankings(): array
     {
         $points = $this->getDriverResults();
         arsort($points);

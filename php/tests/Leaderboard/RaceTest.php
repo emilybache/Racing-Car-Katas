@@ -10,13 +10,13 @@ use RacingCar\Leaderboard\Race;
 
 class RaceTest extends TestCase
 {
-    private $driver1;
+    private Driver $driver1;
 
-    private $driver2;
+    private Driver $driver2;
 
-    private $driver3;
+    private Driver $driver3;
 
-    private $race1;
+    private Race $race1;
 
     protected function setUp(): void
     {

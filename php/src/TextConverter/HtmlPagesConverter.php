@@ -6,25 +6,30 @@ namespace RacingCar\TextConverter;
 
 class HtmlPagesConverter
 {
-    private $filename;
+    /**
+     * @var int[]
+     */
+    private array $breaks;
 
-    private $breaks;
-
-    public function __construct(string $filename)
-    {
-        $this->filename = $filename;
-
+    public function __construct(
+        private string $filename
+    ) {
         $this->breaks = [0];
         $f = fopen($this->filename, 'r');
         while (($line = fgets($f)) !== false) {
             $line = rtrim($line);
-            if (strpos($line, 'PAGE_BREAK') !== false) {
+            if (str_contains($line, 'PAGE_BREAK')) {
                 $pageBreakPosition = ftell($f);
                 $this->breaks[] = ftell($f);
             }
         }
         $this->breaks[] = ftell($f);
         fclose($f);
+    }
+
+    public function getFileName(): string
+    {
+        return $this->filename;
     }
 
     public function getHtmlPage(int $page): string
@@ -36,7 +41,7 @@ class HtmlPagesConverter
         $html = '';
         while (ftell($f) !== $pageEnd) {
             $line = rtrim(fgets($f));
-            if (strpos($line, 'PAGE_BREAK') !== false) {
+            if (str_contains($line, 'PAGE_BREAK')) {
                 break;
             }
             $html .= htmlspecialchars($line, ENT_QUOTES | ENT_HTML5);
@@ -44,10 +49,5 @@ class HtmlPagesConverter
         }
         fclose($f);
         return $html;
-    }
-
-    public function getFileName()
-    {
-        return $this->filename;
     }
 }
