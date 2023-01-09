@@ -4,20 +4,18 @@ declare(strict_types=1);
 
 namespace RacingCar\Leaderboard;
 
-class Driver
+use Stringable;
+
+class Driver implements Stringable
 {
-    public $name;
-
-    public $country;
-
-    public function __construct(?string $name, string $country)
-    {
-        $this->name = $name;
-        $this->country = $country;
+    public function __construct(
+        public ?string $name,
+        public string $country
+    ) {
     }
 
-    public function __toString()
+    public function __toString(): string
     {
-        return "{$this->name} {$this->country}";
+        return (string) "{$this->name} {$this->country}";
     }
 }

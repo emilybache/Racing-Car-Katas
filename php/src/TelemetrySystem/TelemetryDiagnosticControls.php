@@ -10,9 +10,9 @@ class TelemetryDiagnosticControls
 {
     public const DIAGNOSTIC_CHANNEL_CONNECTION_STRING = '*111#';
 
-    public $diagnosticInfo = '';
+    public string $diagnosticInfo = '';
 
-    private $telemetryClient;
+    private \RacingCar\TelemetrySystem\TelemetryClient $telemetryClient;
 
     public function __construct()
     {

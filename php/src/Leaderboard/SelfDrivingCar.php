@@ -6,11 +6,10 @@ namespace RacingCar\Leaderboard;
 
 class SelfDrivingCar extends Driver
 {
-    public $algorithmVersion;
-
-    public function __construct(string $algorithmVersion, string $company)
-    {
+    public function __construct(
+        public string $algorithmVersion,
+        string $company
+    ) {
         parent::__construct(null, $company);
-        $this->algorithmVersion = $algorithmVersion;
     }
 }

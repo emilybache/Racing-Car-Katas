@@ -6,21 +6,23 @@ namespace RacingCar\Leaderboard;
 
 class Race
 {
-    private static $points = [25, 18, 15];
+    /**
+     * @var int[]
+     */
+    private static array $points = [25, 18, 15];
 
-    private $name;
-
-    private $drivers;
-
-    private $driverNames;
+    /**
+     * @var array<string, string|null>
+     */
+    private array $driverNames;
 
     /**
      * @param Driver[]  $drivers
      */
-    public function __construct(string $name, array $drivers)
-    {
-        $this->name = $name;
-        $this->drivers = $drivers;
+    public function __construct(
+        private string $name,
+        private array $drivers
+    ) {
         $this->driverNames = [];
 
         foreach ($drivers as $driver) {
@@ -32,7 +34,7 @@ class Race
         }
     }
 
-    public function getPosition($driver): int
+    public function getPosition(Driver $driver): int
     {
         return array_search($driver, $this->drivers, true);
     }
@@ -42,6 +44,9 @@ class Race
         return self::$points[$this->getPosition($driver)];
     }
 
+    /**
+     * @return Driver[]
+     */
     public function getResults(): array
     {
         return $this->drivers;

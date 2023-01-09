@@ -6,7 +6,7 @@ namespace RacingCar\TurnTicketDispenser;
 
 class TicketDispenser
 {
-    public function getTurnTicket()
+    public function getTurnTicket(): TurnTicket
     {
         $newTurnNumber = TurnNumberSequence::nextTurn();
         return new TurnTicket($newTurnNumber);

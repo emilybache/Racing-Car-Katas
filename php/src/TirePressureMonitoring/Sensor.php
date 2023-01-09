@@ -11,16 +11,16 @@ class Sensor
 {
     private const OFFSET = 16;
 
-    public function popNextPressurePsiValue()
+    public function popNextPressurePsiValue(): float
     {
         $pressureTelemetryValue = self::getSamplePressure();
 
         return self::OFFSET + $pressureTelemetryValue;
     }
 
-    private static function getSamplePressure()
+    private static function getSamplePressure(): float
     {
         // placeholder implementation that simulate a real sensor in a real tire
-        return 6 * mt_rand() / mt_getrandmax() * mt_rand() / mt_getrandmax();
+        return 6 * random_int(0, mt_getrandmax()) / mt_getrandmax() * random_int(0, mt_getrandmax()) / mt_getrandmax();
     }
 }
