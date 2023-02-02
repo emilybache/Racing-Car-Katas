@@ -1,4 +1,5 @@
 var TelemetryClient = require('./telemetry-client.js');
+var TelemetryOperation = require('./telemetry-operation.js');
 
 TelemetryDiagnosticControls = function() {
 
@@ -26,7 +27,7 @@ TelemetryDiagnosticControls.prototype = {
 
 		var retryLeft = 3;
 		while (this._telemetryClient.onlineStatus() === false && retryLeft > 0) {
-			this._telemetryClient.connect(this._diagnosticChannelConnectionString);
+			this._telemetryClient.connectStatus(this._diagnosticChannelConnectionString);
 			retryLeft -= 1;
 		}
 
@@ -34,8 +35,9 @@ TelemetryDiagnosticControls.prototype = {
 			throw 'Unable to connect';
 		}
 
-		this._telemetryClient.send(TelemetryClient.diagnosticMessage());
-		this._diagnosticInfo = this._telemetryClient.receive();
+		TelemetryOperation.send(TelemetryOperation.diagnosticMessage());
+
+		this._diagnosticInfo = TelemetryOperation.receive();
 	}
 };
 

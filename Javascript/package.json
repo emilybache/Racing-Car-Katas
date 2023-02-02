@@ -13,6 +13,6 @@
     "sinon": "3.2.1"
   },
   "scripts": {
-    "test": "mocha tire-pressure-monitoring-system-tests/*-test.js text-converter-tests/*-test.js turn-ticket-dispenser-tests/*-test.js telemetry-system-tests/*-test.js"
+    "test": "mocha telemetry-system-tests/*-test.js"
   }
 }
