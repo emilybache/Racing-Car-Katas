@@ -1,2 +1,5 @@
-package tddmicroexercises.telemetrysystem;public interface DiagnosticControls {
+package tddmicroexercises.telemetrysystem;
+
+public interface DiagnosticControls {
+    public void checkTransmission() throws Exception;
 }
