@@ -1,35 +1,41 @@
 package tddmicroexercises.telemetrysystem;
 
-public class TelemetryDiagnosticControlsImpl extends TelementryDiagnosticInfoImpl implements TelemetryDiagnosticControls {
+public class TelemetryDiagnosticControlsImpl implements TelemetryDiagnosticControls {
         private final String DiagnosticChannelConnectionString = "*111#";
-    
-        private final TelemetryClientImpl telemetryClient;
+
+        private TelementryClient telemetryClient;
+
+        private TelementryConnection telemetryConnection;
+
+        public TelementryDiagnosticInfoImpl telementryDiagnosticInfo;
 
         public TelemetryDiagnosticControlsImpl()
         {
             telemetryClient = new TelemetryClientImpl();
+            telemetryConnection = new TelementryConnectionImpl();
+            telementryDiagnosticInfo = new TelementryDiagnosticInfoImpl();
         }
 
  
         public void checkTransmission(Integer retry) throws Exception {
-            this.setDiagnosticInfo("");
+            telementryDiagnosticInfo.setDiagnosticInfo("");
 
-            telemetryClient.disconnect();
+            telemetryConnection.disconnect();
     
             int retryLeft = retry;
-            while (!telemetryClient.getOnlineStatus() && retryLeft > 0)
+            while (!telemetryConnection.getOnlineStatus() && retryLeft > 0)
             {
-                telemetryClient.connect(DiagnosticChannelConnectionString);
+                telemetryConnection.connect(DiagnosticChannelConnectionString);
                 retryLeft -= 1;
             }
              
-            if(!telemetryClient.getOnlineStatus())
+            if(!telemetryConnection.getOnlineStatus())
             {
                 throw new Exception("Unable to connect.");
             }
-    
+
             telemetryClient.send(TelemetryClientImpl.DIAGNOSTIC_MESSAGE);
 
-            this.setDiagnosticInfo(telemetryClient.receive());
+            telementryDiagnosticInfo.setDiagnosticInfo(telemetryClient.receive());
     }
 }

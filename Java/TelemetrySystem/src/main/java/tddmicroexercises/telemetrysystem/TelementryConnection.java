@@ -2,7 +2,9 @@ package tddmicroexercises.telemetrysystem;
 
 public interface TelementryConnection {
 
-    public void connect(String telemetryServerConnectionString);
+    public boolean getOnlineStatus();
+
+    public void connect(String telemetryServerConnectionString) throws TelementryException;
 
     public void disconnect();
 }

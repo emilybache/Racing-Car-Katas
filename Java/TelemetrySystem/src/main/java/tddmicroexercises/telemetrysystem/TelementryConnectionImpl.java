@@ -6,18 +6,26 @@ public class TelementryConnectionImpl implements TelementryConnection {
 
     private boolean onlineStatus;
 
-    TelementryConnectionEventSimulatorImpl telementryConnectionEventSimulator  = new TelementryConnectionEventSimulatorImpl(42);
+    private final TelementryConnectionEventSimulatorImpl telementryConnectionEventSimulator;
 
-    private final Random connectionEventsSimulator = telementryConnectionEventSimulator.getConnectionEventsSimulator();
+    private final Random connectionEventsSimulator;
+
+    public TelementryConnectionImpl() {
+        this.telementryConnectionEventSimulator = new TelementryConnectionEventSimulatorImpl(42);
+
+        this.connectionEventsSimulator = telementryConnectionEventSimulator.getConnectionEventsSimulator();
+    }
 
     public boolean getOnlineStatus()
     {
         return onlineStatus;
     }
 
-    public void connect(String telemetryServerConnectionString)
-    {
-        CustomException.checkException(telemetryServerConnectionString);
+    public void connect(String telemetryServerConnectionString) throws TelementryException {
+        if (telemetryServerConnectionString == null || "".equals(telemetryServerConnectionString))
+        {
+            throw new TelementryException("Argument can not be empty or null");
+        }
 
         onlineStatus = connectionEventsSimulator.nextInt(10) <= 8;;
     }

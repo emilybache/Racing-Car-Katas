@@ -2,17 +2,27 @@ package tddmicroexercises.telemetrysystem;
 
 import java.util.Random;
 
-public class TelemetryClientImpl extends TelementryConnectionImpl implements TelementryClient
-{
+public class TelemetryClientImpl implements TelementryClient {
     public static final String DIAGNOSTIC_MESSAGE = "AT#UD";
 
     private String diagnosticMessageResult;
 
-    private final Random connectionEventsSimulator = telementryConnectionEventSimulator.getConnectionEventsSimulator();
+    private final Random connectionEventsSimulator;
 
-    public void send(String message) {
+    private final TelementryConnectionEventSimulatorImpl telementryConnectionEventSimulator;
 
-        CustomException.checkException(message);
+    public TelemetryClientImpl() {
+        this.telementryConnectionEventSimulator = new TelementryConnectionEventSimulatorImpl(42);
+
+        this.connectionEventsSimulator = telementryConnectionEventSimulator.getConnectionEventsSimulator();
+    }
+
+    public void send(String message) throws TelementryException {
+
+        if (message == null || "".equals(message))
+        {
+            throw new TelementryException("Argument can not be empty or null");
+        }
 
         if (message == DIAGNOSTIC_MESSAGE) {
             // simulate a status report

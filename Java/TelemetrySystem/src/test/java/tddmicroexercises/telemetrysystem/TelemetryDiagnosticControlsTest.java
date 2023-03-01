@@ -19,6 +19,7 @@ public class TelemetryDiagnosticControlsTest
 
         telemetryDiagnosticControls.checkTransmission(3);
 
+
         final String diagnosticMessageResult =
                 "LAST TX rate................ 100 MBPS\r\n"
                         + "HIGHEST TX rate............. 100 MBPS\r\n"
@@ -35,16 +36,16 @@ public class TelemetryDiagnosticControlsTest
                         + "Local Rtrn Count............ 00\r\n"
                         + "Remote Rtrn Count........... 00";
 
-        assertNotNull(telemetryDiagnosticControls.getDiagnosticInfo());
-        assertEquals(diagnosticMessageResult, telemetryDiagnosticControls.getDiagnosticInfo());
+        assertNotNull(telemetryDiagnosticControls.telementryDiagnosticInfo.getDiagnosticInfo());
+        assertEquals(diagnosticMessageResult, telemetryDiagnosticControls.telementryDiagnosticInfo.getDiagnosticInfo());
     }
 
     @Test
     public void check_set_diagnostic_info() throws Exception {
 
-        telemetryDiagnosticControls.setDiagnosticInfo("test info");
+        telemetryDiagnosticControls.telementryDiagnosticInfo.setDiagnosticInfo("test info");
 
-        assertNotNull(telemetryDiagnosticControls.getDiagnosticInfo());
-        assertEquals("test info", telemetryDiagnosticControls.getDiagnosticInfo());
+        assertNotNull(telemetryDiagnosticControls.telementryDiagnosticInfo.getDiagnosticInfo());
+        assertEquals("test info", telemetryDiagnosticControls.telementryDiagnosticInfo.getDiagnosticInfo());
     }
 }
