@@ -2,47 +2,19 @@ package tddmicroexercises.telemetrysystem;
 
 import java.util.Random;
 
-public class TelemetryClient
+public class TelemetryClientImpl extends TelementryConnectionImpl implements TelementryClient
 {
     public static final String DIAGNOSTIC_MESSAGE = "AT#UD";
 
-    private boolean onlineStatus;
-    private String diagnosticMessageResult = "";
+    private String diagnosticMessageResult;
 
-    private final Random connectionEventsSimulator = new Random(42);
+    private final Random connectionEventsSimulator = telementryConnectionEventSimulator.getConnectionEventsSimulator();
 
-    public boolean getOnlineStatus()
-    {
-        return onlineStatus; 
-    }
+    public void send(String message) {
 
-    public void connect(String telemetryServerConnectionString)
-    {
-        if (telemetryServerConnectionString == null || "".equals(telemetryServerConnectionString))
-        {
-            throw new IllegalArgumentException();
-        }
+        CustomException.checkException(message);
 
-        // simulate the operation on a real modem
-        boolean success = connectionEventsSimulator.nextInt(10) <= 8;
-
-        onlineStatus = success;
-    }
-
-    public void disconnect()
-    {
-        onlineStatus = false;
-    }
-
-    public void send(String message)
-    {
-        if (message == null || "".equals(message))
-        {
-            throw new IllegalArgumentException();
-        }
-
-        if (message == DIAGNOSTIC_MESSAGE)
-        {
+        if (message == DIAGNOSTIC_MESSAGE) {
             // simulate a status report
             diagnosticMessageResult =
                   "LAST TX rate................ 100 MBPS\r\n"
@@ -59,15 +31,12 @@ public class TelemetryClient
                 + "BEP Test.................... -5\r\n"
                 + "Local Rtrn Count............ 00\r\n"
                 + "Remote Rtrn Count........... 00";
-
-            return;
         }
 
         // here should go the real Send operation (not needed for this exercise)
     }
 
-    public String receive()
-    {
+    public String receive() {
         String message;
 
         if (diagnosticMessageResult == null || "".equals(diagnosticMessageResult))
@@ -81,8 +50,7 @@ public class TelemetryClient
             }
             
         } 
-        else
-        {                
+        else {
             message = diagnosticMessageResult;
             diagnosticMessageResult = "";
         }
