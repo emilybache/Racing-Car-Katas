@@ -6,7 +6,7 @@ public class TelementryConnectionImpl implements TelementryConnection {
 
     private boolean onlineStatus;
 
-    private final TelementryConnectionEventSimulatorImpl telementryConnectionEventSimulator;
+    private final TelementryConnectionEventSimulator telementryConnectionEventSimulator;
 
     private final Random connectionEventsSimulator;
 

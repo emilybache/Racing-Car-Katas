@@ -9,7 +9,7 @@ public class TelemetryClientImpl implements TelementryClient {
 
     private final Random connectionEventsSimulator;
 
-    private final TelementryConnectionEventSimulatorImpl telementryConnectionEventSimulator;
+    private final TelementryConnectionEventSimulator telementryConnectionEventSimulator;
 
     public TelemetryClientImpl() {
         this.telementryConnectionEventSimulator = new TelementryConnectionEventSimulatorImpl(42);

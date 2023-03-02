@@ -3,9 +3,9 @@ package tddmicroexercises.telemetrysystem;
 public class TelemetryDiagnosticControlsImpl implements TelemetryDiagnosticControls {
         private final String DiagnosticChannelConnectionString = "*111#";
 
-        private TelementryClient telemetryClient;
+        private final TelementryClient telemetryClient;
 
-        private TelementryConnection telemetryConnection;
+        private final TelementryConnection telemetryConnection;
 
         public TelementryDiagnosticInfoImpl telementryDiagnosticInfo;
 
