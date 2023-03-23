@@ -56,7 +56,7 @@ pub mod tire_pressure_monitoring_system {
 
     #[cfg(test)]
     mod tests {
-        use super::{Alarm, Sensor};
+        use super::{Alarm};
 
         #[test]
         fn test_alarm() {
