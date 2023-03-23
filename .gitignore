@@ -32,3 +32,9 @@ xcuserdata/
 *.moved-aside
 *.xccheckout
 *.xcscmblueprint
+
+# Rust
+/target/
+Cargo.lock
+**/*.rs.bk
+target/
