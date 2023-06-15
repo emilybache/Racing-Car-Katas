@@ -1,50 +1,73 @@
+from typing import List, DefaultDict
+from abc import ABC, abstractmethod
 from collections import defaultdict
 
 
-class Leaderboard(object):
-    
-    def __init__(self, races):
-        self.races = races
+class AbstractDriver(ABC):
 
-    def driver_points(self):
-        driver_points = defaultdict(int)
-        for race in self.races:
-            for driver in race.results:
-                name = race.driver_name(driver)
-                driver_points[name] += race.points(driver)
-        return driver_points
-
-    def driver_rankings(self):
-        rankings = sorted(self.driver_points().items(), key=lambda x: x[1], reverse=True)
-        return [name for (name, points) in rankings]
+    @abstractmethod
+    def get_name(self) -> str:
+        pass
 
 
-class Driver(object):
-    def __init__(self, name, country):
+class Driver(AbstractDriver):
+    def __init__(self, name: str, country: str):
         self.name = name
         self.country = country
 
-class SelfDrivingCar(Driver):
-    def __init__(self, algorithm_version, company):
-        Driver.__init__(self, None, company)
+    def get_name(self) -> str:
+        return self.name
+
+
+class SelfDrivingCar(AbstractDriver):
+    def __init__(self, company: str, algorithm_version: str):
+        self.company = company
         self.algorithm_version = algorithm_version
-        
-class Race(object):
 
-    _points = [25, 18, 15]
+    def get_name(self):
+        return "Self Driving Car - {} ({})".format(self.company, self.algorithm_version)
 
-    def __init__(self, name, results):
+
+class AbstractRace(ABC):
+
+    def __init__(self, name: str, results: List[AbstractDriver], points: List[int]):
         self.name = name
         self.results = results
-        self.driver_names = {}
-        for driver in results:
-            name = driver.name
-            if isinstance(driver, SelfDrivingCar):
-                name = "Self Driving Car - {} ({})".format(driver.country, driver.algorithm_version)
-            self.driver_names[driver] = name
+        self._points = points
 
-    def points(self, driver):
-        return Race._points[self.results.index(driver)]
+    @abstractmethod
+    def points(self, driver) -> int:
+        pass
 
-    def driver_name(self, driver):
-        return self.driver_names[driver]
+
+class Race(AbstractRace):
+
+    def __init__(self, name, results: List[AbstractDriver], points: List[int] = (25, 18, 15)):
+        super().__init__(name, results, points)
+        self.driver_names = [driver.get_name() for driver in self.results]
+
+    def points(self, driver) -> int:
+        return self._points[self.results.index(driver)] \
+            if self._check_driver_in_points(driver) else 0
+
+    def _check_driver_in_points(self, driver) -> bool:
+        return driver in self.results and self.results.index(driver) < len(self._points)
+
+
+class Leaderboard(object):
+
+    def __init__(self, races: List[AbstractRace]):
+        self.races = races
+        self.total_driver_points = self.driver_points()
+
+    def driver_points(self) -> DefaultDict:
+        driver_points = defaultdict(int)
+        for race in self.races:
+            for driver in race.results:
+                driver_points[driver.get_name()] += race.points(driver)
+        return driver_points
+
+    def driver_rankings(self) -> List:
+        rankings = sorted(self.total_driver_points.items(), key=lambda x: x[1], reverse=True)
+        return [name for (name, points) in rankings]
+
