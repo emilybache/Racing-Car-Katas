@@ -1,15 +1,24 @@
 package tddmicroexercises.telemetrysystem;
 
-public class TelemetryDiagnosticControls
+import tddmicroexercises.telemetrysysteminterface.ITelemetryDiagnosticControls;
+
+public class TelemetryDiagnosticControls implements ITelemetryDiagnosticControls
 {
-    private final String DiagnosticChannelConnectionString = "*111#";
-    
     private final TelemetryClient telemetryClient;
+    private final TelemetryClientConnectionManager telemetryClientConnectionManager;
+
     private String diagnosticInfo = "";
+
+        TelemetryDiagnosticControls(TelemetryClientConnectionManager telemetryClientConnectionManager, TelemetryClient telemetryClient){
+            this.telemetryClientConnectionManager = telemetryClientConnectionManager;
+            this.telemetryClient = telemetryClient;
+        }
 
         public TelemetryDiagnosticControls()
         {
+
             telemetryClient = new TelemetryClient();
+            telemetryClientConnectionManager = new TelemetryClientConnectionManager();
         }
         
         public String getDiagnosticInfo(){
@@ -19,26 +28,27 @@ public class TelemetryDiagnosticControls
         public void setDiagnosticInfo(String diagnosticInfo){
             this.diagnosticInfo = diagnosticInfo;
         }
- 
-        public void checkTransmission() throws Exception
-        {
-            diagnosticInfo = "";
 
-            telemetryClient.disconnect();
-    
-            int retryLeft = 3;
-            while (telemetryClient.getOnlineStatus() == false && retryLeft > 0)
-            {
-                telemetryClient.connect(DiagnosticChannelConnectionString);
-                retryLeft -= 1;
-            }
-             
-            if(telemetryClient.getOnlineStatus() == false)
-            {
-                throw new Exception("Unable to connect.");
-            }
-    
-            telemetryClient.send(TelemetryClient.DIAGNOSTIC_MESSAGE);
-            diagnosticInfo = telemetryClient.receive();
+    public void checkTransmission() throws Exception
+    {
+        diagnosticInfo = "";
+
+        telemetryClientConnectionManager.disconnect();
+
+        int retryLeft = 3;
+        while (telemetryClientConnectionManager.getOnlineStatus() == false && retryLeft > 0)
+        {
+            telemetryClientConnectionManager.connect(DiagnosticChannelConnectionString);
+            retryLeft -= 1;
+        }
+
+        if(telemetryClientConnectionManager.getOnlineStatus() == false)
+        {
+            throw new Exception("Unable to connect.");
+        }
+
+        telemetryClient.send(TelemetryClient.DIAGNOSTIC_MESSAGE);
+        diagnosticInfo = telemetryClient.receive();
     }
+
 }

@@ -1,39 +1,19 @@
 package tddmicroexercises.telemetrysystem;
 
-import java.util.Random;
+import tddmicroexercises.telemetrysysteminterface.ITelemetryClient;
 
-public class TelemetryClient
+public class TelemetryClient implements ITelemetryClient
 {
-    public static final String DIAGNOSTIC_MESSAGE = "AT#UD";
-
-    private boolean onlineStatus;
     private String diagnosticMessageResult = "";
+    private final TelemetryClientConnectionManager telemetryClientConnectionManager;
 
-    private final Random connectionEventsSimulator = new Random(42);
-
-    public boolean getOnlineStatus()
-    {
-        return onlineStatus; 
+    TelemetryClient(TelemetryClientConnectionManager telemetryClientConnectionManager){
+        this.telemetryClientConnectionManager = telemetryClientConnectionManager;
     }
 
-    public void connect(String telemetryServerConnectionString)
-    {
-        if (telemetryServerConnectionString == null || "".equals(telemetryServerConnectionString))
-        {
-            throw new IllegalArgumentException();
-        }
-
-        // simulate the operation on a real modem
-        boolean success = connectionEventsSimulator.nextInt(10) <= 8;
-
-        onlineStatus = success;
+    TelemetryClient(){
+        telemetryClientConnectionManager = new TelemetryClientConnectionManager();
     }
-
-    public void disconnect()
-    {
-        onlineStatus = false;
-    }
-
     public void send(String message)
     {
         if (message == null || "".equals(message))
@@ -74,10 +54,10 @@ public class TelemetryClient
         {
             // simulate a received message (just for illustration - not needed for this exercise)
             message = "";
-            int messageLength = connectionEventsSimulator.nextInt(50) + 60;
+            int messageLength = telemetryClientConnectionManager.getConnectionEventsSimulator().nextInt(50) + 60;
             for(int i = messageLength; i >=0; --i)
             {
-                message += (char)connectionEventsSimulator.nextInt(40) + 86;
+                message += (char) telemetryClientConnectionManager.getConnectionEventsSimulator().nextInt(40) + 86;
             }
             
         } 
