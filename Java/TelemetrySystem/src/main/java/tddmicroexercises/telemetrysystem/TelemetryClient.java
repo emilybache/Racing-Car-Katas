@@ -41,7 +41,7 @@ public class TelemetryClient
             throw new IllegalArgumentException();
         }
 
-        if (message == DIAGNOSTIC_MESSAGE)
+        if (message.equals(DIAGNOSTIC_MESSAGE))
         {
             // simulate a status report
             diagnosticMessageResult =
