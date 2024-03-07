@@ -1,3 +1,5 @@
+_Support this and all my katas via [Patreon](https://www.patreon.com/EmilyBache)_
+
 Racing Car Katas
 =================
 
