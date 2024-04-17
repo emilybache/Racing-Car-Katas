@@ -3,7 +3,22 @@ _Support this and all my katas via [Patreon](https://www.patreon.com/EmilyBache)
 Racing Car Katas
 =================
 
-In this repository you'll find starting code for five distinct problems. They could be code you inherited from a legacy code-base. Now you want to write unit tests for them, and that is harder than it needs to be. All of the code snippets fail to follow one or more of the SOLID principles.
+Imagine this is code you inherited from a legacy code-base. You want to write unit tests for them, and that is harder than it needs to be. By solving these problems you can learn more about the SOLID design principles and how to refactor code to be more testable.
+
+Getting the code
+----------------
+
+Previously there were 5 distinct exercises in this repo, but recently I began splitting them up to make it easier to focus on one at a time.
+
+1. [TirePressureMonitoringSystem](https://github.com/emilybache/TirePressure-Kata)
+2. [HtmlTextConverter](https://github.com/emilybache/HtmlConverter-Kata)
+3. [TicketDispenser](https://github.com/emilybache/TurnTicket-Kata)
+4. TelemetrySystem - not yet migrated
+5. Leaderboard - not yet migrated
+
+
+Exercise Instructions
+---------------------
 
 For each exercise, you should identify which SOLID principles are not being followed by the code. There is only one class you are interested in writing tests for right now. As a first step, try to get some kind of test in place before you change the class at all. If the tests are hard to write, is that because of the problems with SOLID principles?
 
@@ -24,7 +39,7 @@ Apply the unit testing style and framework you are most comfortable with. You ca
 TDD with Mock Objects: Design Principles and Emerging Properties
 ----------------------------------------------------------------
 
-This was originally a fork of Luca Minudel's repo. He was using it for a study of TDD and Design principles. I am using it as a repository for storing exercises useful for people wishing to improve their skills with TDD and SOLID principles. Please look at my blog post ["SOLID principles and TDD"](http://coding-is-like-cooking.info/2012/09/solid-principles-and-tdd/) for background reading, or my book ["The Coding Dojo Handbook"](http://leanpub.com/codingdojohandbook).
+This was originally a fork of [Luca Minudel's repo](https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples). He was using it for a study of TDD and Design principles. I am using it as a repository for storing exercises useful for people wishing to improve their skills with TDD and SOLID principles. Please look at my blog post ["SOLID principles and TDD"](http://coding-is-like-cooking.info/2012/09/solid-principles-and-tdd/) for background reading, or my book ["The Coding Dojo Handbook"](http://leanpub.com/codingdojohandbook).
 
 - When you've had a go at these exercises yourself, you could look at the [proposed solutions](https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/tree/master/TDDMicroExercises.ProposedSolution) in C#, Java, Javascript. If you've done the exercises in Python, you might be interested in my blog post ["SOLID exercises in Python"](http://coding-is-like-cooking.info/2012/09/solid-exercises-in-python/).
 
