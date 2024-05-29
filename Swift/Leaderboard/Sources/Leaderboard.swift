@@ -3,8 +3,8 @@ import Foundation
 public class Leaderboard {
     private var _races: [Race] = []
 
-    public init(_races: [Race]) {
-        self._races = _races
+    public init(races: [Race]) {
+        self._races = races
     }
 
     public func driverResults() -> [String: Int] {
