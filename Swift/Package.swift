@@ -15,6 +15,11 @@ let package = Package(
         .testTarget(
             name: "LeaderboardTests",
             dependencies: ["Leaderboard"]
+        ),
+        .target(name: "TirePressure"),
+        .testTarget(
+            name: "TirePressureTests",
+            dependencies: ["TirePressure"]
         )
     ]
 )
