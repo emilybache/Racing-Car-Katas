@@ -12,7 +12,7 @@ public class Alarm {
     public func check() {
         let psiPressureValue = _sensor.PopNextPressurePsiValue()
 
-        if (psiPressureValue > lowPressureThreshold || highPressureThreshold < psiPressureValue) {
+        if (psiPressureValue < lowPressureThreshold || highPressureThreshold < psiPressureValue) {
             _alarmOn = true
             _alarmCount += 1
         }
