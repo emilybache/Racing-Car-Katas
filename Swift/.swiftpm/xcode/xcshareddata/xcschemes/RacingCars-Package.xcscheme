@@ -49,6 +49,20 @@
                ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "TurnTicket"
+               BuildableName = "TurnTicket"
+               BlueprintName = "TurnTicket"
+               ReferencedContainer = "container:">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -85,6 +99,16 @@
                BlueprintIdentifier = "TirePressureTests"
                BuildableName = "TirePressureTests"
                BlueprintName = "TirePressureTests"
+               ReferencedContainer = "container:">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "TurnTicketTests"
+               BuildableName = "TurnTicketTests"
+               BlueprintName = "TurnTicketTests"
                ReferencedContainer = "container:">
             </BuildableReference>
          </TestableReference>

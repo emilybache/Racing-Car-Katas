@@ -20,6 +20,11 @@ let package = Package(
         .testTarget(
             name: "TirePressureTests",
             dependencies: ["TirePressure"]
+        ),
+        .target(name: "TurnTicket"),
+        .testTarget(
+            name: "TurnTicketTests",
+            dependencies: ["TurnTicket"]
         )
     ]
 )
