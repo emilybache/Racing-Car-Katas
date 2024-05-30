@@ -6,31 +6,20 @@ import PackageDescription
 let package = Package(
     name: "RacingCars",
     targets: [
-        .target(name: "TelemetrySystem"),
-        .testTarget(
-            name: "TelemetrySystemTests",
-            dependencies: ["TelemetrySystem"]
-        ),
-        .target(name: "Leaderboard"),
-        .testTarget(
-            name: "LeaderboardTests",
-            dependencies: ["Leaderboard"]
-        ),
-        .target(name: "TirePressure"),
-        .testTarget(
-            name: "TirePressureTests",
-            dependencies: ["TirePressure"]
-        ),
-        .target(name: "TurnTicket"),
-        .testTarget(
-            name: "TurnTicketTests",
-            dependencies: ["TurnTicket"]
-        ),
-        .target(name: "HtmlConverter"),
-        .testTarget(
-            name: "HtmlConverterTests",
-            dependencies: ["HtmlConverter"]
-        )
-    ]
+        kata("TelemetrySystem"),
+        kata("Leaderboard"),
+        kata("TirePressure"),
+        kata("TurnTicket"),
+        kata("HtmlConverter")
+    ].flatMap { $0 }
 )
 
+func kata(_ name: String) -> [Target] {
+    [
+        .target(name: name),
+        .testTarget(
+            name: name + "Tests",
+            dependencies: [.target(name: name)]
+        )
+    ]
+}
