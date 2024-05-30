@@ -25,6 +25,11 @@ let package = Package(
         .testTarget(
             name: "TurnTicketTests",
             dependencies: ["TurnTicket"]
+        ),
+        .target(name: "HtmlConverter"),
+        .testTarget(
+            name: "HtmlConverterTests",
+            dependencies: ["HtmlConverter"]
         )
     ]
 )
