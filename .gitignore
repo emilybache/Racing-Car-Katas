@@ -38,3 +38,4 @@ xcuserdata/
 Cargo.lock
 **/*.rs.bk
 target/
+/.vs
