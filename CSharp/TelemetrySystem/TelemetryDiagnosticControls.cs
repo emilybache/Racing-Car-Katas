@@ -1,46 +1,36 @@
-
 using System;
 
-namespace TDDMicroExercises.TelemetrySystem
+namespace TDDMicroExercises.TelemetrySystem;
+
+public class TelemetryDiagnosticControls
 {
-    public class TelemetryDiagnosticControls
+    private const string DiagnosticChannelConnectionString = "*111#";
+
+    public string DiagnosticInfo { get; set; } = string.Empty;
+
+    public ITelemetryClient TelemetryClient { get; }
+
+    public TelemetryDiagnosticControls(ITelemetryClient telemetryClient)
     {
-        private const string DiagnosticChannelConnectionString = "*111#";
+        this.TelemetryClient = telemetryClient;
+    }
 
-        public ITelemetryClient TelemetryClient { get; }
-        private string _diagnosticInfo = string.Empty;
+    public void CheckTransmission()
+    {
+        this.DiagnosticInfo = string.Empty;
 
-        public TelemetryDiagnosticControls(ITelemetryClient telemetryClient)
+        this.TelemetryClient.Disconnect();
+
+        var retryLeft = 3;
+        while (this.TelemetryClient.IsConnected() == false && retryLeft > 0)
         {
-            this.TelemetryClient = telemetryClient;
+            this.TelemetryClient.Connect(TelemetryDiagnosticControls.DiagnosticChannelConnectionString);
+            retryLeft -= 1;
         }
 
-        public string DiagnosticInfo
-        {
-            get { return _diagnosticInfo; }
-            set { _diagnosticInfo = value; }
-        }
+        if (this.TelemetryClient.IsConnected() == false) throw new Exception("Unable to connect.");
 
-        public void CheckTransmission()
-        {
-            _diagnosticInfo = string.Empty;
-
-            TelemetryClient.Disconnect();
-
-            int retryLeft = 3;
-            while (TelemetryClient.IsConnected() == false && retryLeft > 0)
-            {
-                TelemetryClient.Connect(DiagnosticChannelConnectionString);
-                retryLeft -= 1;
-            }
-             
-            if(TelemetryClient.IsConnected() == false)
-            {
-                throw new Exception("Unable to connect.");
-            }
-
-            TelemetryClient.Send(TelemetrySystem.TelemetryClient.DiagnosticMessage);
-            _diagnosticInfo = TelemetryClient.Receive();
-        }
+        this.TelemetryClient.Send(TelemetrySystem.TelemetryClient.DiagnosticMessage);
+        this.DiagnosticInfo = this.TelemetryClient.Receive();
     }
 }
