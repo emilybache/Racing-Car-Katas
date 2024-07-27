@@ -1,3 +1,4 @@
+using System;
 using Moq;
 using Xunit;
 
@@ -24,18 +25,24 @@ namespace TDDMicroExercises.TelemetrySystem.Tests
         public class CheckTransmissionShould
         {
             [Fact]
-            public void Send_a_diagnostic_message_when_connected()
+            public void Disconnect()
             {
                 // Arrange
                 var telemetryClientMock = new Mock<ITelemetryClient>();
                 var telemetryDiagnosticControls = new TelemetryDiagnosticControls(telemetryClientMock.Object);
-                telemetryClientMock.Setup(x => x.IsConnected()).Returns(true);
 
                 // Act
-                telemetryDiagnosticControls.CheckTransmission();
+                try
+                {
+                    telemetryDiagnosticControls.CheckTransmission();
+                }
+                catch
+                {
+                    // ignored
+                }
 
                 // Assert
-                telemetryClientMock.Verify(x => x.Send(TelemetryClient.DiagnosticMessage), Times.Once);
+                telemetryClientMock.Verify(x => x.Disconnect(), Times.Once);
             }
         }
     }
