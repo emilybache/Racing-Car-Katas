@@ -96,6 +96,26 @@ namespace TDDMicroExercises.TelemetrySystem.Tests
                 // Assert
                 telemetryClientMock.Verify(x => x.Send(It.IsAny<string>()), Times.Once);
             }
+
+            [Fact]
+            public void Receive_after_sending()
+            {
+                // Arrange
+                bool hasSent = false;
+                var telemetryClientMock = new Mock<ITelemetryClient>();
+                telemetryClientMock.Setup(x => x.IsConnected()).Returns(true);
+                var telemetryDiagnosticControls = new TelemetryDiagnosticControls(telemetryClientMock.Object);
+                telemetryClientMock.Setup(x => x.IsConnected()).Returns(true);
+                telemetryClientMock.Setup(x => x.Send(It.IsAny<string>())).Callback(() => hasSent = true);
+                telemetryClientMock.Setup(x => x.Receive()).Callback(() => Assert.True(hasSent));
+
+                // Act
+                telemetryDiagnosticControls.CheckTransmission();
+
+                // Assert
+                telemetryClientMock.Verify(x => x.Receive(), Times.Once);
+
+            }
         }
     }
 }
