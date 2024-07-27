@@ -2,7 +2,16 @@ using System;
 
 namespace TDDMicroExercises.TelemetrySystem
 {
-    public class TelemetryClient
+    public interface ITelemetryClient
+    {
+        void Connect(string telemetryServerConnectionString);
+        void Disconnect();
+        void Send(string message);
+        string Receive();
+        bool IsConnected();
+    }
+
+    public class TelemetryClient : ITelemetryClient
     {
         public const string DiagnosticMessage = "AT#UD";
 
@@ -11,10 +20,7 @@ namespace TDDMicroExercises.TelemetrySystem
 
         private readonly Random _connectionEventsSimulator = new Random(42);
 
-        public bool OnlineStatus
-        {
-            get { return _onlineStatus; }
-        }
+        public bool IsConnected() => _onlineStatus;
 
         public void Connect(string telemetryServerConnectionString)
         {

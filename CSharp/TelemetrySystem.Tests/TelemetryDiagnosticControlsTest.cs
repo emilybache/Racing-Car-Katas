@@ -1,12 +1,24 @@
+using Moq;
 using Xunit;
 
 namespace TDDMicroExercises.TelemetrySystem.Tests
 {
-    public class TelemetryDiagnosticControlsTest
+    public class TelemetryDiagnosticControlShould
     {
-        [Fact]
-        public void CheckTransmission_should_send_a_diagnostic_message_and_receive_a_status_message_response()
+        public class CtorShould
         {
+            [Fact]
+            public void Set_the_telemetry_client()
+            {
+                // Arrange
+                var telemetryClientMock = new Mock<ITelemetryClient>();
+
+                // Act
+                var telemetryDiagnosticControls = new TelemetryDiagnosticControls(telemetryClientMock.Object);
+
+                // Assert
+                Assert.Same(telemetryClientMock.Object, telemetryDiagnosticControls.TelemetryClient);
+            }
         }
     }
 }
