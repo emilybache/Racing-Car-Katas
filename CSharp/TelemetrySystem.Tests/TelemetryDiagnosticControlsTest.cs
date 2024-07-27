@@ -80,6 +80,22 @@ namespace TDDMicroExercises.TelemetrySystem.Tests
                 // Assert
                 Assert.Equal("Unable to connect.", exception.Message);
             }
+
+            [Fact]
+            public void Send_if_connected()
+            {
+                // Arrange
+                var telemetryClientMock = new Mock<ITelemetryClient>();
+                telemetryClientMock.Setup(x => x.IsConnected()).Returns(true);
+                var telemetryDiagnosticControls = new TelemetryDiagnosticControls(telemetryClientMock.Object);
+                telemetryClientMock.Setup(x => x.IsConnected()).Returns(true);
+
+                // Act
+                telemetryDiagnosticControls.CheckTransmission();
+
+                // Assert
+                telemetryClientMock.Verify(x => x.Send(It.IsAny<string>()), Times.Once);
+            }
         }
     }
 }
