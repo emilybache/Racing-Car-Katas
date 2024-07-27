@@ -44,6 +44,27 @@ namespace TDDMicroExercises.TelemetrySystem.Tests
                 // Assert
                 telemetryClientMock.Verify(x => x.Disconnect(), Times.Once);
             }
+
+            [Fact]
+            public void Try_to_connect_at_max_thrice()
+            {
+                // Arrange
+                var telemetryClientMock = new Mock<ITelemetryClient>();
+                var telemetryDiagnosticControls = new TelemetryDiagnosticControls(telemetryClientMock.Object);
+
+                // Act
+                try
+                {
+                    telemetryDiagnosticControls.CheckTransmission();
+                }
+                catch
+                {
+                    // ignored
+                }
+
+                // Assert
+                telemetryClientMock.Verify(x => x.Connect(It.IsAny<string>()), Times.Exactly(3));
+            }
         }
     }
 }
