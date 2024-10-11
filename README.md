@@ -13,7 +13,7 @@ Getting the code
 Previously there were 5 distinct exercises in this repo, but recently I began splitting them up to make it easier to focus on one at a time.
 
 1. [TirePressureMonitoringSystem](https://github.com/emilybache/TirePressure-Kata)
-2. [HtmlTextConverter](https://github.com/emilybache/HtmlConverter-Kata)
+2. [HtmlTextConverter](https://github.com/emilybache/HtmlConverter-TestDesign-Kata)
 3. [TicketDispenser](https://github.com/emilybache/TurnTicket-Kata)
 4. TelemetrySystem - not yet migrated
 5. Leaderboard - not yet migrated
