@@ -1,10 +1,9 @@
 package tddmicroexercises.leaderboard
 
-import org.junit.Test
 
-import org.junit.Assert.assertEquals
-import org.junit.Assert.assertTrue
-
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertTrue
+import org.junit.jupiter.api.Test
 import tddmicroexercises.leaderboard.TestData.driver1
 import tddmicroexercises.leaderboard.TestData.driver2
 import tddmicroexercises.leaderboard.TestData.driver3
@@ -19,7 +18,7 @@ class LeaderboardTest {
         val results = TestData.sampleLeaderboard1.driverResults()
 
         // verify
-        assertTrue("results $results", results.containsKey("Lewis Hamilton"))
+        assertTrue(results.containsKey("Lewis Hamilton"), "results $results")
         assertEquals((18 + 18 + 25).toLong(), (results.get("Lewis Hamilton") as Int).toLong())
     }
 
